@@ -5,7 +5,9 @@ class LandingPage extends React.Component {
   render() {
     return (
       <div className="landing-page-container">
-        <h1>Elevate</h1>
+        <section className="section-one"></section>
+        <section className="section-two"></section>
+        <section className="section-three"></section>
       </div>
     );
   }
