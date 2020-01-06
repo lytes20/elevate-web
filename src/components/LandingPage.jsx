@@ -35,7 +35,6 @@ class LandingPage extends React.Component {
       <div className="landing-page-container">
         <section className="section-one" ref={element => (this.sectionOne = element)}>
           <Home />
-          <Menu />
         </section>
         <section className="section-two"></section>
         <section className="section-three"></section>
