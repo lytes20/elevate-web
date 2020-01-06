@@ -3,11 +3,18 @@ header {
   justify-content: space-between;
   padding: 20px;
 }
+.header-dark-background {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  -webkit-transition: .4s; /* For Safari 3.1 to 6.0 */
+  transition: .4s;
+}
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
 }
+
 .header-menu-button {
   border: none;
   background: transparent;
