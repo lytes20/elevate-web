@@ -4,18 +4,22 @@ import Header from './Header';
 import Menu from './Menu';
 
 class Home extends React.Component {
-  state = {
-    slideIndex: 1,
-    slides: document.getElementsByClassName('slides')
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      slideIndex: 1,
+      slides: document.getElementsByClassName('slides')
+    };
+    this.timeoutFunction = null;
+  }
 
   componentDidMount = () => {
     const { slideIndex } = this.state;
-    this.showSlides(slideIndex);
+    setTimeout(() => this.showSlides(slideIndex), 0.1);
   };
 
   handleAutoPlay = duration => {
-    setTimeout(() => this.gotoNext(), duration);
+    this.timeoutFunction = setTimeout(() => this.gotoNext(), duration);
   };
   showSlides = slideIndex => {
     let i;
@@ -33,19 +37,23 @@ class Home extends React.Component {
       });
     }
     for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = 'none';
+      slides[i].classList.remove('full-height');
+      slides[i].classList.add('zero-height');
     }
-    slides[slideIndex - 1].style.display = 'grid';
+    slides[slideIndex - 1].classList.add('full-height');
+    slides[slideIndex - 1].classList.remove('zero-height');
     this.handleAutoPlay(5000);
   };
 
   gotoNext = () => {
+    clearTimeout(this.timeoutFunction);
     this.setState(prevState => {
       return { slideIndex: prevState.slideIndex + 1 };
     }, this.showSlides(this.state.slideIndex));
   };
 
   gotoPrev = () => {
+    clearTimeout(this.timeoutFunction);
     this.setState(prevState => {
       return { slideIndex: prevState.slideIndex - 1 };
     }, this.showSlides(this.state.slideIndex));
