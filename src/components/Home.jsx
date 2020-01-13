@@ -2,6 +2,7 @@ import React from 'react';
 import '../assets/styles/home.scss';
 import Header from './Header';
 import Menu from './Menu';
+import SocialMediaLinks from './SocialMediaLinks';
 
 class Home extends React.Component {
   constructor(props) {
@@ -97,6 +98,7 @@ class Home extends React.Component {
             </div>
           ))}
         </div>
+        <SocialMediaLinks />
         <div className="landing-content-container slide-1 slides">
           <h1>Branding</h1>
         </div>
