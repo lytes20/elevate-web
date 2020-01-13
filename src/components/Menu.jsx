@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 import '../assets/styles/menu.scss';
 import { closeMenuModel } from '../actions/appActions';
 
-function Menu(props) {
-  console.log('Props -->', props);
+function Menu(props) { 
   const { openMenu, closeMenuModel } = props;
   const styleclass = openMenu ? 'menu-container' : 'menu-container-none';
   return (
@@ -12,9 +11,9 @@ function Menu(props) {
       <button onClick={() => closeMenuModel()}>Close</button>
       <div className="menu-list-container">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Branding</a></li>
-          <li><a href="#">Digital</a></li>
+          <li><a href="https://www.google.com/">Home</a></li>
+          <li><a href="https://www.google.com/">Branding</a></li>
+          <li><a href="https://www.google.com/">Digital</a></li>
         </ul>
       </div>
     </div>

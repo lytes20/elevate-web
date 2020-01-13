@@ -4,18 +4,10 @@ import '../assets/styles/landingpage.scss';
 
 import { handleEndScroll, handleIsScrolling } from '../actions/appActions';
 import Home from './Home';
-import Menu from './Menu';
 
 class LandingPage extends React.Component {
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
-    const options = {};
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        console.log(entry);
-      });
-    }, options);
-    observer.observe(this.sectionOne);
   }
 
   componentWillUnmount() {

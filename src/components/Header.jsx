@@ -9,7 +9,6 @@ class Header extends React.Component {
     console.log('Menu Button was clicked');
   };
   render() {
-    console.log(this.props);
     const { isScrolling, openMenuModel } = this.props;
     const headerClass = isScrolling ? 'header-dark-background' : '';
     return (
