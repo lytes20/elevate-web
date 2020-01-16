@@ -4,6 +4,7 @@ import '../assets/styles/landingpage.scss';
 
 import { handleEndScroll, handleIsScrolling } from '../actions/appActions';
 import Home from './Home';
+import BottomPage from './BottomPage'
 
 class LandingPage extends React.Component {
   componentDidMount() {
@@ -30,6 +31,9 @@ class LandingPage extends React.Component {
         </section>
         <section className="section-two"></section>
         <section className="section-three"></section>
+        <section className="section-four">
+          <BottomPage />
+        </section>
       </div>
     );
   }
