@@ -1,15 +1,15 @@
 import React from 'react';
 
 export default function Footer() {
-  function createData() {}
-  const addressDetails = [createData('Acacia Mall fourth floor'), createData('0752229343'), createData('gideonbamuleseyo@gmail.com')];
+  // function createData() {}
+  // const addressDetails = [createData('Acacia Mall fourth floor'), createData('0752229343'), createData('gideonbamuleseyo@gmail.com')];
   const footerLinks = ['Home', 'Branding', 'Digital', 'BTL'];
   return (
     <div>
       Elevate Ug
       <ul>
         {footerLinks.map(footerLink => (
-          <li>{footerLink}</li>
+          <li key={footerLink}>{footerLink}</li>
         ))}
       </ul>
       <div>

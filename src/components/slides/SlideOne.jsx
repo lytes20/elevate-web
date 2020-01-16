@@ -5,8 +5,7 @@ import { bulbImage } from '../../assets';
 export default function SlideOne() {
   const bulbImageContainer = useRef(null);
   const brandingText = useRef(null);
-
-  console.log('bulbImageContainer -->', bulbImageContainer.current);
+  
   useEffect(() => showBulb());
   function showBulb() {
     setTimeout(() => {
