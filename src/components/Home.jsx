@@ -3,6 +3,7 @@ import '../assets/styles/home.scss';
 import Header from './Header';
 import Menu from './Menu';
 import SocialMediaLinks from './SocialMediaLinks';
+import SlideOne from './slides/SlideOne'
 
 class Home extends React.Component {
   constructor(props) {
@@ -100,7 +101,7 @@ class Home extends React.Component {
         </div>
         <SocialMediaLinks />
         <div className="landing-content-container slide-1 slides">
-          <h1>Branding</h1>
+          <SlideOne />
         </div>
         <div className="landing-content-container slide-2 slides">
           <h1>Digital</h1>
