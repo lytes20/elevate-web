@@ -4,8 +4,11 @@ import '../assets/styles/landingpage.scss';
 
 import { handleEndScroll, handleIsScrolling } from '../actions/appActions';
 import Home from './Home';
-import BottomPage from './BottomPage'
-import PartnersPage from './pages/PartnersPage'
+import BottomPage from './BottomPage';
+import PartnersPage from './pages/PartnersPage';
+import BrandingPage from './pages/BrandingPage';
+import BTLPage from './pages/BTLPage';
+import DigitalPage from './pages/DigitalPage';
 
 class LandingPage extends React.Component {
   componentDidMount() {
@@ -30,10 +33,14 @@ class LandingPage extends React.Component {
         <section className="section-one" ref={element => (this.sectionOne = element)}>
           <Home />
         </section>
-        <section className="section-two"></section>
-        <section className="section-three"></section>
+        <section className="section-two">
+          <BrandingPage />
+        </section>
+        <section className="section-three">
+          <BTLPage />
+        </section>
         <section className="section-four">
-          <BottomPage />
+          <DigitalPage />
         </section>
         <section className="section-five">
           <PartnersPage />
