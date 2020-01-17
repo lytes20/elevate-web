@@ -13,3 +13,27 @@
   background-color: #1b313a;
   color: #879ba5;
 }
+.upper-bottom-page-content {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+.buttons {
+  margin-top: 20px;
+}
+.buttons button {
+  background-color: #1c313a;
+  padding: 20px 73px 20px 73px;
+  border-radius: 3px;
+  font-size: 15px;
+  color: #fff;
+  margin-right: 15px;
+}
+
+.footer-content{
+  text-align: center;
+  height: 100%;
+}

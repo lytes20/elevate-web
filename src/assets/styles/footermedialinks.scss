@@ -1,0 +1,12 @@
+.footer-social-media-link-container div {
+  cursor: pointer;
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+}
+
+.footer-social-media-link-container div img {
+  width: 20px;
+  height: 20px;
+  filter: invert(77%) sepia(99%) saturate(1963%) hue-rotate(164deg) brightness(100%) contrast(80%);
+}
