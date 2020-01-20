@@ -7,7 +7,7 @@ export default function BTLPage() {
   return (
     <div className="pages btl-page-container">
       <div>
-        <div className="branding-page-main">
+        <div className="pages-main">
           <div className="mascot-image-container btl-content">
             <img src={mediaImage} alt="media" />
           </div>

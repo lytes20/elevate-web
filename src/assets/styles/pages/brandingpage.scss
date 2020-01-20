@@ -1,36 +1,14 @@
 .branding-page-container {
-  width: 100%;
-  height: 100%;
   background: linear-gradient(45deg, rgba(28, 49, 58, 1) 0%, rgba(28, 49, 58, 1) 51%, rgba(255, 221, 0, 1) 51%, rgba(255, 221, 0, 1) 100%);
-  background-color: #1c313a;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
 }
 .branding-h2 {
   color: #ffdd01;
-}
-.branding-page-main {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.branding-content {
-  flex: 1;
 }
 .branding-text-container {
   text-align: center;
 }
 .mascot-image-container {
   box-sizing: border-box;
-}
-
-.mascot-image-container img {
-  max-width: 100%;
-  height: auto;
 }
 .branding-p {
   color: #ffffcc;
@@ -40,20 +18,7 @@
   background: #ffdd01;
   color: #493200;
 }
-.branding-tags-container {
-  background-color: rgba(25, 31, 35, 0.82);
-  border-radius: 10px;
-  margin: 0 auto;
-  width: 70%;
-  text-align: center;
-}
-.branding-tags-container ul {
-  padding: 10px;
-}
-.branding-tags-container ul li {
-  display: inline-block;
-  padding: 10px;
-}
+
 .branding-tags-container ul li:not(:last-child) {
   border-right: 1px solid #ffdf00;
   margin-right: 40px;

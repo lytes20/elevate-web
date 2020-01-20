@@ -2,13 +2,14 @@ import React from 'react';
 import '../../assets/styles/pages/brandingpage.scss';
 import '../../assets/styles/pages/commonpages.scss';
 import { mascotImage } from '../../assets';
+import { brandingTags } from '../../utils/constants';
 
 export default function BrandingPage() {
   return (
     <div className="pages branding-page-container">
       <div>
-        <div className="branding-page-main">
-          <div className="branding-text-container branding-content">
+        <div className="pages-main">
+          <div className="page-title-container pages-content">
             <h2 className="branding-h2">Branding</h2>
             <div className="pages-p-container">
               <p className="branding-p">
@@ -19,25 +20,18 @@ export default function BrandingPage() {
 
             <button className="see-more-button branding-btn">see more</button>
           </div>
-          <div className="mascot-image-container branding-content">
+          <div className="pages-image-container pages-content">
             <img src={mascotImage} alt="sit-relax" />
           </div>
         </div>
 
-        <div className="branding-tags-container">
+        <div className="pages-tags-container branding-tags-container">
           <ul>
-            <li>
-              <p className="branding-tags"> Brand management</p>
-            </li>
-            <li>
-              <p className="branding-tags">Strategic design</p>
-            </li>
-            <li>
-              <p className="branding-tags">Packaging</p>
-            </li>
-            <li>
-              <p className="branding-tags">360 campaigns</p>
-            </li>
+            {brandingTags.map(tag => (
+              <li>
+                <p className="branding-tags">{tag}</p>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
