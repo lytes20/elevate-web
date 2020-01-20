@@ -1,19 +1,20 @@
 .branding-page-container {
   width: 100%;
   height: 100%;
-  background-image: url('../../images/brandingpagebg.png');
+  background: linear-gradient(45deg, rgba(28, 49, 58, 1) 0%, rgba(28, 49, 58, 1) 51%, rgba(255, 221, 0, 1) 51%, rgba(255, 221, 0, 1) 100%);
+  background-color: #1c313a;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
-.branding-text-container h1 {
+.branding-text-container h2 {
   font-size: 100px;
   color: #ffdd01;
   text-transform: uppercase;
+  mix-blend-mode: difference;
 }
 .branding-page-main {
   width: 90%;
-  // border: 1px solid green;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -27,7 +28,6 @@
   text-align: center;
 }
 .mascot-image-container {
-  // border: 1px solid red;
   box-sizing: border-box;
 }
 

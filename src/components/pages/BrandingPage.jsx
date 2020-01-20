@@ -8,7 +8,7 @@ export default function BrandingPage() {
       <div>
         <div className="branding-page-main">
           <div className="branding-text-container branding-content">
-            <h1>Branding</h1>
+            <h2>Branding</h2>
             <div className="branding-p">
               <p>
                 We take care of the creation, construction and development of the brand, we know that each one is different, so it is
