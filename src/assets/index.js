@@ -11,3 +11,4 @@ export { default as emailIcon } from "./icons/envelope.png";
 // Image Assets 
 export { default as bulbImage } from "./images/bulb.png";
 export { default as mascotImage } from "./images/mascot.png";
+export { default as mediaImage } from "./images/mediaimage.png";
