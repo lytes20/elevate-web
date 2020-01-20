@@ -13,3 +13,4 @@ export { default as bulbImage } from './images/bulb.png';
 export { default as mascotImage } from './images/mascot.png';
 export { default as mediaImage } from './images/mediaimage.png';
 export { default as digitalImage } from './images/digitalimage.png';
+export { default as clientLogos } from './images/clientlogos.png';

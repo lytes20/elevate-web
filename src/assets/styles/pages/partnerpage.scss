@@ -1,13 +1,29 @@
-.latest-projects, .partners{
-    text-align: center;
+.portfolio-container {
+  height: 100vh;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.portfolio-title {
+  padding: 20px;
+  line-height: 1;
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #425563;
+}
+.latest-projects,
+.clients {
+  text-align: center;
+  flex: 1;
 }
 .projects-container {
   display: flex;
   width: 100%;
   box-sizing: border-box;
 }
-.projects-container div {
-}
 .project-container img {
   width: 100%;
+  height: auto;
 }
