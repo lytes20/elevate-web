@@ -1,9 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import '../assets/styles/home.scss';
+
+import { handleEndScroll, handleIsScrolling } from '../actions/appActions';
 import Header from './Header';
 import Menu from './Menu';
 import SocialMediaLinks from './SocialMediaLinks';
-import SlideOne from './slides/SlideOne'
+import SlideOne from './slides/SlideOne';
 
 class Home extends React.Component {
   constructor(props) {
@@ -19,8 +22,13 @@ class Home extends React.Component {
 
   componentDidMount = () => {
     const { slideIndex } = this.state;
+    window.addEventListener('scroll', this.handleScroll);
     setTimeout(() => this.showSlides(slideIndex), 0.1);
   };
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
 
   handleAutoPlay = duration => {
     this.timeoutFunction = setTimeout(() => this.gotoNext(), duration);
@@ -78,6 +86,14 @@ class Home extends React.Component {
     clearTimeout(this.timeoutFunction);
     this.showSlides(index + 1);
   };
+  handleScroll = () => {
+    const { handleEndScroll, handleIsScrolling } = this.props;
+    if (window.pageYOffset === 0) {
+      handleEndScroll();
+    } else {
+      handleIsScrolling();
+    }
+  };
   render() {
     return (
       <div className="home-container">
@@ -122,5 +138,8 @@ class Home extends React.Component {
     );
   }
 }
-
-export default Home;
+const mapDispatchToProps = dispatch => ({
+  handleEndScroll: () => dispatch(handleEndScroll()),
+  handleIsScrolling: () => dispatch(handleIsScrolling())
+});
+export default connect(null, mapDispatchToProps)(Home);
