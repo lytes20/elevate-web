@@ -27,7 +27,7 @@ export default function DigitalPage() {
         <div className="pages-tags-container digital-tags-container">
           <ul>
             {digitalTags.map(tag => (
-              <li>
+              <li key={tag}>
                 <p className="digital-tags">{tag}</p>
               </li>
             ))}

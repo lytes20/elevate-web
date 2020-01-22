@@ -28,8 +28,8 @@ export default function BTLPage() {
         <div className="btl-tags-container">
           <ul>
             {BTLTags.map(tag => (
-              <li>
-                <p key={tag} className="btl-tags">
+              <li key={tag}>
+                <p className="btl-tags">
                   {tag}
                 </p>
               </li>

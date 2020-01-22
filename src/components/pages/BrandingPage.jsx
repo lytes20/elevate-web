@@ -28,7 +28,7 @@ export default function BrandingPage() {
         <div className="pages-tags-container branding-tags-container">
           <ul>
             {brandingTags.map(tag => (
-              <li>
+              <li key={tag}>
                 <p className="branding-tags">{tag}</p>
               </li>
             ))}
