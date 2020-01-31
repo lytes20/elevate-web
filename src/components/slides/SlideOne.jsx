@@ -19,6 +19,11 @@ export default function SlideOne() {
         <div className="branding-text" ref={brandingText}>
           <img src={brandingTextImage} alt="branding text" />
         </div>
+        <div className="split-letters-container">
+          <div>Let</div>
+          <div>Ideas</div>
+          <div>Fly</div>
+        </div>
         <div className="bulb-image-container" ref={bulbImageContainer}>
           <img src={bulbImage} alt="bulb" />
         </div>
