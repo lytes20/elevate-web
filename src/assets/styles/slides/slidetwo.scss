@@ -3,3 +3,122 @@
   width: 100%;
   height: 100%;
 }
+
+.digital-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.show-digital-text {
+  opacity: 1;
+}
+.split-letters-container {
+  display: block;
+  text-align: center;
+  position: relative;
+  color: rgb(0, 53, 107);
+}
+
+.split-letters-container div {
+  display: inline-block;
+}
+.overlay {
+//   border: 1px solid green;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+.hearts {
+  width: 100%;
+  height: 332px;
+  box-sizing: border-box;
+  //   transform: translateY(100rem);
+  transition: visibility 1s;
+  margin: 0 auto;
+//   border: 1px solid red;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
+}
+.hearts-container {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+//   border: 1px solid green;
+}
+.heart-image-container {
+  width: 332px;
+  height: 332px;
+}
+
+.heart-image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.show-heart {
+  //   transform: translateY(0);
+  visibility: visible;
+}
+
+.imageSpin {
+  animation-name: spin;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 0.5s;
+  -webkit-animation-name: spin;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 0.5s;
+}
+
+.love-gif-container {
+  width: 74px;
+  height: 149px;
+//   border: 1px solid yellow;
+}
+
+.love-gif-left {
+  transform: translate(30px, 100px) rotate(-10deg);
+  margin: 0;
+}
+
+.love-gif-right {
+  transform: translate(-40px, 45px) rotate(10deg);
+  margin: 0;
+}
+
+.love-gif-container img {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+    moz-transform: rotateY(0deg); //Firefox
+    ms-transform: rotateY(0deg); //Microsoft Browsers
+  }
+  to {
+    transform: rotateY(360deg);
+    moz-transform: rotateY(360deg); //Firefox
+    ms-transform: rotateY(360deg); //Microsoft Browsers
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+  }
+}
