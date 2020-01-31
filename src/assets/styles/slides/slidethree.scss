@@ -1,0 +1,33 @@
+.slide-three-container {
+  width: 100%;
+  height: 100%;
+}
+.slide-three-banner {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: url(https://www.agenciamach.com/wp-content/uploads/2019/08/banner-btl.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  top: 0px;
+  left: 0px;
+  visibility: inherit;
+  z-index: 20;
+}
+.btl-image-text-container {
+  width: 211px;
+  height: 101px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.btl-image-text-container img {
+  width: 100%;
+  height: 100%;
+}

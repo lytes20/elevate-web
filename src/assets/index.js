@@ -16,4 +16,7 @@ export { default as digitalImage } from './images/digitalimage.png';
 export { default as clientLogos } from './images/clientlogos.png';
 export { default as heartMainImage } from './images/heartmain.png';
 export { default as digitalTextImage } from './images/digitalletters.png';
+export { default as btlTextImage } from './images/text-btl.png';
+
+// Gif Assets
 export { default as loveLovy } from './gifs/lovegiphy.gif'

@@ -8,6 +8,7 @@ import Menu from './Menu';
 import SocialMediaLinks from './SocialMediaLinks';
 import SlideOne from './slides/SlideOne';
 import SlideTwo from './slides/SlideTwo';
+import SlideThree from './slides/SlideThree';
 
 class Home extends React.Component {
   constructor(props) {
@@ -124,7 +125,7 @@ class Home extends React.Component {
           <SlideTwo />
         </div>
         <div className="landing-content-container slide-3 slides">
-          <h1>Btl</h1>
+          <SlideThree />
         </div>
         <div className="landing-content-container slide-4 slides">
           <h1>Something</h1>
