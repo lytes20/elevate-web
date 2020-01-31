@@ -47,7 +47,28 @@
   width: 100%;
   height: 100%;
 }
+.small-bulb-image-container {
+  position: absolute;
+  width: 64px;
+  height: 54px;
+  // border: 1px solid green;
+}
+.small-bulb-image-container img {
+  width: 100%;
+  height: 100%;
+}
 
+.left-bulb {
+  top: 50%;
+  left: 10%;
+  transform: rotate(-30deg);
+}
+
+.right-bulb {
+  top: 20%;
+  right: 3%;
+  transform: rotate(30deg);
+}
 .show-bulb {
   transform: translateY(0);
 }

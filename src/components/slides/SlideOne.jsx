@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import '../../assets/styles/slides/slideone.scss';
-import { bulbImage, brandingTextImage } from '../../assets';
+import { bulbImage, brandingTextImage, smallBulb } from '../../assets';
 
 export default function SlideOne() {
   const bulbImageContainer = useRef(null);
@@ -16,6 +16,12 @@ export default function SlideOne() {
   return (
     <div className="slide-one-container">
       <div className="slide-one-content">
+        <div className="small-bulb-image-container left-bulb">
+          <img src={smallBulb} alt="small bulb" />
+        </div>
+        <div className="small-bulb-image-container right-bulb">
+          <img src={smallBulb} alt="small bulb" />
+        </div>
         <div className="branding-text" ref={brandingText}>
           <img src={brandingTextImage} alt="branding text" />
         </div>
