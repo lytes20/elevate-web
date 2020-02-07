@@ -2,6 +2,25 @@ import React, { useRef, useEffect } from 'react';
 import '../../assets/styles/slides/slideone.scss';
 import { bulbImage, brandingTextImage, smallBulb } from '../../assets';
 
+/**
+ * Split letters in the divs and put them in spans
+ * @param {HTMLCollection} word - div containing the letters
+ * @returns {Array}
+ */
+const splitLetters = word => {
+  var content = word.innerHTML;
+  word.innerHTML = '';
+  var letters = [];
+  for (var i = 0; i < content.length; i++) {
+    var letter = document.createElement('span');
+    letter.className = 'letter';
+    letter.innerHTML = content.charAt(i);
+    word.appendChild(letter);
+    letters.push(letter);
+  }
+  return letters;
+};
+
 export default function SlideOne() {
   const bulbImageContainer = useRef(null);
   const brandingText = useRef(null);
@@ -9,17 +28,59 @@ export default function SlideOne() {
   const leftSmallBulbImageRef = useRef(null);
   const rightSmallBulbImageRef = useRef(null);
   const slideOneContent = useRef(null);
+  let letters = null;
+  var lettersArray = [];
 
   useEffect(() => showBulb());
   useEffect(() => handleMouseMovement());
+  useEffect(() => {
+    letters = document.getElementsByClassName('letters');
+    handleLettersAnimation();
+    return () => {
+      // cleanup
+    };
+  }, []);
+
+  /**
+   * Handles overall letter animation
+   * @returns {void}
+   */
+  const handleLettersAnimation = () => {
+    for (var i = 0; i < letters.length; i++) {
+      const spiltLetters = splitLetters(letters[i]);
+      lettersArray.push(...spiltLetters);
+    }
+    for (var i = 0; i < lettersArray.length; i++) {
+      lettersArray[i].className = 'letter behind';
+      animateLetterIn(lettersArray[i], i);
+    }
+  };
+
+  /**
+   * Handles actual animation
+   * @param {HTMLElement} letter - span containing the letter to be animated
+   *  * @param {Number} index - position of the letter in the letters array
+   * @returns {void}
+   */
+  function animateLetterIn(letter, index) {
+    setTimeout(function() {
+      letter.parentElement.style.opacity = 1;
+      letter.className = 'letter in';
+    }, 400 + index * 80);
+  }
+
+  /**
+   * Handles showing the bulb
+   * @param {object} event - Event that occurs on an input
+   * @param {int} capacity - resource quantity
+   * @returns {void}
+   */
   function showBulb() {
     setTimeout(() => {
       brandingText.current.className += ' show-branding-text';
       bulbImageContainer.current.className += ' show-bulb';
     }, 1200);
   }
-
-  console.log(slideOneContent);
 
   function handleMouseMovement() {
     slideOneContent.current.addEventListener('mousemove', e => {
@@ -32,14 +93,13 @@ export default function SlideOne() {
       rightSmallBulbImageRef.current.style.cssText = `
       transform: translate(-${e.offsetX / 20}px, -${e.offsetY / 20}px);
       `;
-
     });
   }
   return (
     <div className="slide-one-container">
       <div className="slide-one-content" ref={slideOneContent}>
         <div className="small-bulb-image-container left-bulb">
-          <img src={smallBulb} alt="small bulb" ref={leftSmallBulbImageRef}/>
+          <img src={smallBulb} alt="small bulb" ref={leftSmallBulbImageRef} />
         </div>
         <div className="small-bulb-image-container right-bulb">
           <img src={smallBulb} alt="small bulb" ref={rightSmallBulbImageRef} />
@@ -48,9 +108,11 @@ export default function SlideOne() {
           <img src={brandingTextImage} alt="branding text" />
         </div>
         <div className="split-letters-container">
-          <div>Let</div>
-          <div>Ideas</div>
-          <div>Fly</div>
+          <div className="letters">Let</div>
+          &nbsp;
+          <div className="letters">Ideas</div>
+          &nbsp;
+          <div className="letters">Fly</div>
         </div>
         <div className="bulb-image-container" ref={bulbImageContainer}>
           <img src={bulbImage} alt="bulb" className="bulb-image" ref={bulbImageRef} />
