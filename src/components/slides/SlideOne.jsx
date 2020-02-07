@@ -6,6 +6,8 @@ export default function SlideOne() {
   const bulbImageContainer = useRef(null);
   const brandingText = useRef(null);
   const bulbImageRef = useRef(null);
+  const leftSmallBulbImageRef = useRef(null);
+  const rightSmallBulbImageRef = useRef(null);
   const slideOneContent = useRef(null);
 
   useEffect(() => showBulb());
@@ -22,18 +24,25 @@ export default function SlideOne() {
   function handleMouseMovement() {
     slideOneContent.current.addEventListener('mousemove', e => {
       bulbImageRef.current.style.cssText = `
-      transform: translate(-${e.offsetX / 20}px, -${e.offsetY / 20}px) rotate(0deg);
+      transform: translate(-${e.offsetX / 20}px, -${e.offsetY / 20}px);
       `;
+      leftSmallBulbImageRef.current.style.cssText = `
+      transform: translate(-${e.offsetX / 20}px, -${e.offsetY / 20}px);
+      `;
+      rightSmallBulbImageRef.current.style.cssText = `
+      transform: translate(-${e.offsetX / 20}px, -${e.offsetY / 20}px);
+      `;
+
     });
   }
   return (
     <div className="slide-one-container">
       <div className="slide-one-content" ref={slideOneContent}>
         <div className="small-bulb-image-container left-bulb">
-          <img src={smallBulb} alt="small bulb" />
+          <img src={smallBulb} alt="small bulb" ref={leftSmallBulbImageRef}/>
         </div>
         <div className="small-bulb-image-container right-bulb">
-          <img src={smallBulb} alt="small bulb" />
+          <img src={smallBulb} alt="small bulb" ref={rightSmallBulbImageRef} />
         </div>
         <div className="branding-text" ref={brandingText}>
           <img src={brandingTextImage} alt="branding text" />
