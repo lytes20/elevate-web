@@ -1,18 +1,24 @@
 import React, { useRef, useEffect } from 'react';
 import '../../assets/styles/slides/slidetwo.scss';
 import { heartMainImage, digitalTextImage, loveLovy } from '../../assets';
+import { splitLetters } from '../../utils';
 
 export default function SlideTwo() {
   const slideTwoContainer = useRef(null);
   const digitalImageContainer = useRef(null);
   const digitalTextContainer = useRef(null);
   const heartImage = useRef(null);
+  let letters = null;
+  var lettersArray = [];
+
   let timeOutFunctionOne = null;
   let timeOutFunctionTwo = null;
   let timeOutFunctionThree = null;
 
   useEffect(() => {
+    letters = document.getElementsByClassName('letters');
     showBulb();
+    handleLettersAnimation();
     setTimeout(() => showSlide(), 0.2);
     return () => {
       clearTimeout(timeOutFunctionOne);
@@ -23,6 +29,34 @@ export default function SlideTwo() {
   const showSlide = () => {
     timeOutFunctionOne = slideTwoContainer.current.classList.add('full-height');
   };
+
+  /**
+   * Handles overall letter animation
+   * @returns {void}
+   */
+  const handleLettersAnimation = () => {
+    for (var i = 0; i < letters.length; i++) {
+      const spiltLetters = splitLetters(letters[i]);
+      lettersArray.push(...spiltLetters);
+    }
+    for (var i = 0; i < lettersArray.length; i++) {
+      lettersArray[i].className = 'letter behind';
+      animateLetterIn(lettersArray[i], i);
+    }
+  };
+
+  /**
+   * Handles actual animation
+   * @param {HTMLElement} letter - span containing the letter to be animated
+   *  * @param {Number} index - position of the letter in the letters array
+   * @returns {void}
+   */
+  function animateLetterIn(letter, index) {
+    setTimeout(function() {
+      letter.parentElement.style.opacity = 1;
+      letter.className = 'letter in';
+    }, 400 + index * 80);
+  }
   function showBulb() {
     timeOutFunctionTwo = setTimeout(() => {
       digitalTextContainer.current.className += ' show-digital-text';
@@ -37,10 +71,12 @@ export default function SlideTwo() {
       <div className="digital-text-container" ref={digitalTextContainer}>
         <img src={digitalTextImage} alt="digital text" />
       </div>
-      <div className="split-letters-container">
-        <div>Viralize</div>
-        <div> Your</div>
-        <div>Brand</div>
+      <div className="slide-two-letters">
+        <div className="letters">Viralize</div>
+        &nbsp;
+        <div className="letters">Your</div>
+        &nbsp;
+        <div className="letters">Brand</div>
       </div>
       <div className="overlay">
         <div className="hearts" ref={digitalImageContainer}>

@@ -131,7 +131,6 @@ class Home extends React.Component {
   render() {
     const { slideIndex } = this.state;
     let currentSlide = this.getSlide(slideIndex);
-    // console.log(currentSlide);
     return (
       <div className="home-container">
         <Header />

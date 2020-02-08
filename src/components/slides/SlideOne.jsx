@@ -1,25 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import '../../assets/styles/slides/slideone.scss';
 import { bulbImage, brandingTextImage, smallBulb } from '../../assets';
-
-/**
- * Split letters in the divs and put them in spans
- * @param {HTMLCollection} word - div containing the letters
- * @returns {Array}
- */
-const splitLetters = word => {
-  var content = word.innerHTML;
-  word.innerHTML = '';
-  var letters = [];
-  for (var i = 0; i < content.length; i++) {
-    var letter = document.createElement('span');
-    letter.className = 'letter';
-    letter.innerHTML = content.charAt(i);
-    word.appendChild(letter);
-    letters.push(letter);
-  }
-  return letters;
-};
+import { splitLetters } from '../../utils';
 
 export default function SlideOne() {
   const slideOneContainer = useRef(null);

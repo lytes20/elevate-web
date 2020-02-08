@@ -23,17 +23,18 @@
 .show-digital-text {
   opacity: 1;
 }
-.split-letters-container {
+.slide-two-letters {
   display: block;
   text-align: center;
   position: relative;
   color: rgb(0, 53, 107);
-  top: 50%;
+  top: 34%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-size: 21px;
 }
 
-.split-letters-container div {
+.slide-two-letters div {
   display: inline-block;
 }
 .overlay {
