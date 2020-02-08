@@ -69,18 +69,38 @@
 .heart-image-container {
   width: 332px;
   height: 332px;
+  position: relative;
+  // border: 1px solid green;
 }
 
-.heart-image-container img {
+.heart-image {
   width: 100%;
   height: 100%;
+  margin-top: 50px;
 }
 
 .show-heart {
-  //   transform: translateY(0);
   visibility: visible;
 }
-
+.emoji-image-container {
+  position: absolute;
+  z-index: 1;
+  top: 92px;
+  right: -18px;
+  width: 100px;
+  height: 100px;
+  visibility: hidden;
+  transition: top 1s;
+}
+.emoji-image {
+  width: 100%;
+  height: 100%;
+}
+.move-emoji{
+  top: -13px !important;
+  right: -18px !important;
+  visibility: visible !important;
+}
 .imageSpin {
   animation-name: spin;
   animation-timing-function: linear;

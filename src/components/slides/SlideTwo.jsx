@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import '../../assets/styles/slides/slidetwo.scss';
-import { heartMainImage, digitalTextImage, loveLovy } from '../../assets';
+import { heartMainImage, digitalTextImage, loveLovy, smilingEmoji } from '../../assets';
 import { splitLetters } from '../../utils';
 
 export default function SlideTwo() {
@@ -8,6 +8,7 @@ export default function SlideTwo() {
   const digitalImageContainer = useRef(null);
   const digitalTextContainer = useRef(null);
   const heartImage = useRef(null);
+  const emojiImageContainer = useRef(null);
   let letters = null;
   var lettersArray = [];
 
@@ -64,6 +65,7 @@ export default function SlideTwo() {
     }, 1200);
     timeOutFunctionThree = setTimeout(() => {
       heartImage.current.classList.remove('imageSpin');
+      emojiImageContainer.current.className += ' move-emoji'
     }, 1800);
   }
   return (
@@ -85,7 +87,10 @@ export default function SlideTwo() {
               <img src={loveLovy} alt="double-tap" />
             </div>
             <div className="heart-image-container">
-              <img className="imageSpin" src={heartMainImage} alt="heart main" ref={heartImage} />
+              <div className="emoji-image-container" ref={emojiImageContainer}>
+                <img src={smilingEmoji} alt="smiling emoji" className="emoji-image" />
+              </div>
+              <img className="heart-image imageSpin" src={heartMainImage} alt="heart main" ref={heartImage} />
             </div>
             <div className="love-gif-container love-gif-right">
               <img src={loveLovy} alt="double-tap" />
