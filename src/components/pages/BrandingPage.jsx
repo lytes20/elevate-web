@@ -8,10 +8,10 @@ export default function BrandingPage() {
   const mascotImageRef = useRef(null);
   const brandingPageRef = useRef(null);
   useEffect(() => {
-    console.log('in UseEffect');
+    // console.log('in UseEffect');
     window.addEventListener('scroll', scrollHandler);
     return () => {
-      console.log('in UseEffect CleanUp');
+      // console.log('in UseEffect CleanUp');
       window.removeEventListener('scroll', scrollHandler);
     };
   }, []);

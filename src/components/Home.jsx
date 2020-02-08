@@ -14,18 +14,21 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      slideIndex: 1,
+      slideIndex: 0,
       slides: document.getElementsByClassName('slides'),
       dots: document.getElementsByClassName('dot'),
       tooltips: document.getElementsByClassName('tool-tip')
     };
     this.timeoutFunction = null;
+    // this.currentSlide = null;
   }
 
   componentDidMount = () => {
-    const { slideIndex } = this.state;
+    console.log('-------');
+    console.log('component Did Mount was called');
+    console.log('--------');
     window.addEventListener('scroll', this.handleScroll);
-    setTimeout(() => this.showSlides(slideIndex), 0.1);
+    // setTimeout(() => this.showSlides(slideIndex), 0.1);
   };
 
   componentWillUnmount() {
@@ -35,46 +38,53 @@ class Home extends React.Component {
   handleAutoPlay = duration => {
     this.timeoutFunction = setTimeout(() => this.gotoNext(), duration);
   };
-  showSlides = slideIndex => {
-    let i;
-    const { slides, dots } = this.state;
-    if (slideIndex > slides.length) {
-      slideIndex = 1;
-      this.setState({
-        slideIndex: 1
-      });
-    }
-    if (slideIndex < 1) {
-      slideIndex = slides.length;
-      this.setState({
-        slideIndex: slides.length
-      });
-    }
-    for (i = 0; i < slides.length; i++) {
-      slides[i].classList.remove('full-height');
-      slides[i].classList.add('zero-height');
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace('active', '');
-    }
-    slides[slideIndex - 1].classList.add('full-height');
-    slides[slideIndex - 1].classList.remove('zero-height');
-    dots[slideIndex - 1].className += ' active';
-    // this.handleAutoPlay(5000);
-  };
+  // showSlides = slideIndex => {
+  //   let i;
+  //   const { slides, dots } = this.state;
+  //   if (slideIndex > slides.length) {
+  //     slideIndex = 1;
+  //     this.setState({
+  //       slideIndex: 1
+  //     });
+  //   }
+  //   if (slideIndex < 1) {
+  //     slideIndex = slides.length;
+  //     this.setState({
+  //       slideIndex: slides.length
+  //     });
+  //   }
+  //   for (i = 0; i < slides.length; i++) {
+  //     slides[i].classList.remove('full-height');
+  //     slides[i].classList.add('zero-height');
+  //   }
+  //   for (i = 0; i < dots.length; i++) {
+  //     dots[i].className = dots[i].className.replace('active', '');
+  //   }
+  //   slides[slideIndex - 1].classList.add('full-height');
+  //   slides[slideIndex - 1].classList.remove('zero-height');
+  //   dots[slideIndex - 1].className += ' active';
+  //   this.handleAutoPlay(5000);
+  // };
 
   gotoNext = () => {
-    clearTimeout(this.timeoutFunction);
-    this.setState(prevState => {
-      return { slideIndex: prevState.slideIndex + 1 };
-    }, this.showSlides(this.state.slideIndex));
+    // clearTimeout(this.timeoutFunction);
+    this.setState(
+      prevState => {
+        return { slideIndex: prevState.slideIndex + 1 };
+      },
+      () => this.getSlide(this.state.slideIndex)
+    );
   };
 
   gotoPrev = () => {
-    clearTimeout(this.timeoutFunction);
-    this.setState(prevState => {
-      return { slideIndex: prevState.slideIndex - 1 };
-    }, this.showSlides(this.state.slideIndex));
+    console.log('go to Prev is called');
+    this.setState(
+      prevState => {
+        console.log(prevState);
+        return { slideIndex: prevState.slideIndex - 1 };
+      },
+      () => this.getSlide(this.state.slideIndex)
+    );
   };
   handleDotOnHover = index => {
     const { tooltips } = this.state;
@@ -96,7 +106,32 @@ class Home extends React.Component {
       handleIsScrolling();
     }
   };
+
+  getSlide = index => {
+    const { slides, slideIndex } = this.state;
+    console.log('slideIndex', slideIndex);
+
+    const slidesArray = [<SlideOne />, <SlideTwo />, <SlideThree />];
+    if (index >= slidesArray.length) {
+      index = 0;
+      this.setState({
+        slideIndex: 0
+      });
+    }
+
+    if (index < 0) {
+      index = slidesArray.length - 1;
+      this.setState({
+        slideIndex: slidesArray.length - 1
+      });
+    }
+    return slidesArray[index];
+  };
+
   render() {
+    const { slideIndex } = this.state;
+    let currentSlide = this.getSlide(slideIndex);
+    // console.log(currentSlide);
     return (
       <div className="home-container">
         <Header />
@@ -118,18 +153,7 @@ class Home extends React.Component {
           ))}
         </div>
         <SocialMediaLinks />
-        <div className="landing-content-container slide-1 slides">
-          <SlideOne />
-        </div>
-        <div className="landing-content-container slide-2 slides">
-          <SlideTwo />
-        </div>
-        <div className="landing-content-container slide-3 slides">
-          <SlideThree />
-        </div>
-        <div className="landing-content-container slide-4 slides">
-          <h1>Something</h1>
-        </div>
+        <div className={`landing-content-container slide-${slideIndex} slides`}>{currentSlide}</div>
         <button className="prev" onClick={() => this.gotoPrev()}>
           &#10094;
         </button>
