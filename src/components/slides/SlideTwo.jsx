@@ -3,22 +3,38 @@ import '../../assets/styles/slides/slidetwo.scss';
 import { heartMainImage, digitalTextImage, loveLovy } from '../../assets';
 
 export default function SlideTwo() {
+  const slideTwoContainer = useRef(null);
   const digitalImageContainer = useRef(null);
   const digitalTextContainer = useRef(null);
   const heartImage = useRef(null);
+  let timeOutFunctionOne = null;
+  let timeOutFunctionTwo = null;
+  let timeOutFunctionThree = null;
 
-  useEffect(() => showBulb());
+  useEffect(() => {
+    showBulb();
+    setTimeout(() => showSlide(), 0.2);
+    return () => {
+      console.log('Clean up is called');
+      clearTimeout(timeOutFunctionOne);
+      clearTimeout(timeOutFunctionTwo);
+      clearTimeout(timeOutFunctionThree);
+    };
+  }, []);
+  const showSlide = () => {
+    timeOutFunctionOne = slideTwoContainer.current.classList.add('full-height');
+  };
   function showBulb() {
-    setTimeout(() => {
+    timeOutFunctionTwo = setTimeout(() => {
       digitalTextContainer.current.className += ' show-digital-text';
       digitalImageContainer.current.className += ' show-heart';
     }, 1200);
-    setTimeout(() => {
+    timeOutFunctionThree = setTimeout(() => {
       heartImage.current.classList.remove('imageSpin');
     }, 1800);
   }
   return (
-    <div className="slide-two-container">
+    <div className="slide-two-container" ref={slideTwoContainer}>
       <div className="digital-text-container" ref={digitalTextContainer}>
         <img src={digitalTextImage} alt="digital text" />
       </div>
