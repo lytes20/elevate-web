@@ -18,16 +18,13 @@ class Home extends React.Component {
       slides: document.getElementsByClassName('slides'),
       dots: document.getElementsByClassName('dot'),
       tooltips: document.getElementsByClassName('tool-tip'),
-      slidesArray: [<SlideOne />, <SlideTwo />, <SlideThree />]
+      slidesArray: [<SlideOne />, <SlideTwo />]
     };
     this.timeoutFunction = null;
     // this.currentSlide = null;
   }
 
   componentDidMount = () => {
-    console.log('-------');
-    console.log('component Did Mount was called');
-    console.log('--------');
     window.addEventListener('scroll', this.handleScroll);
     // setTimeout(() => this.showSlides(slideIndex), 0.1);
   };
@@ -78,7 +75,7 @@ class Home extends React.Component {
   };
 
   gotoPrev = () => {
-    console.log('go to Prev is called');
+    // clearTimeout(this.timeoutFunction);
     this.setState(
       prevState => {
         console.log(prevState);
@@ -110,8 +107,6 @@ class Home extends React.Component {
 
   getSlide = index => {
     const { slidesArray } = this.state;
-    // console.log('slideIndex', slideIndex);
-
     if (index >= slidesArray.length) {
       index = 0;
       this.setState({
@@ -125,6 +120,7 @@ class Home extends React.Component {
         slideIndex: slidesArray.length - 1
       });
     }
+    // this.handleAutoPlay(6000);
     return slidesArray[index];
   };
 
