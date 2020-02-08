@@ -17,7 +17,8 @@ class Home extends React.Component {
       slideIndex: 0,
       slides: document.getElementsByClassName('slides'),
       dots: document.getElementsByClassName('dot'),
-      tooltips: document.getElementsByClassName('tool-tip')
+      tooltips: document.getElementsByClassName('tool-tip'),
+      slidesArray: [<SlideOne />, <SlideTwo />, <SlideThree />]
     };
     this.timeoutFunction = null;
     // this.currentSlide = null;
@@ -95,8 +96,8 @@ class Home extends React.Component {
     tooltips[index].className = tooltips[index].className.replace('show', '');
   };
   handleSlideChange = index => {
-    clearTimeout(this.timeoutFunction);
-    this.showSlides(index + 1);
+    // clearTimeout(this.timeoutFunction);
+    this.setState({ slideIndex: index }, () => this.getSlide(index));
   };
   handleScroll = () => {
     const { handleEndScroll, handleIsScrolling } = this.props;
@@ -108,10 +109,9 @@ class Home extends React.Component {
   };
 
   getSlide = index => {
-    const { slides, slideIndex } = this.state;
-    console.log('slideIndex', slideIndex);
+    const { slidesArray } = this.state;
+    // console.log('slideIndex', slideIndex);
 
-    const slidesArray = [<SlideOne />, <SlideTwo />, <SlideThree />];
     if (index >= slidesArray.length) {
       index = 0;
       this.setState({
@@ -129,14 +129,14 @@ class Home extends React.Component {
   };
 
   render() {
-    const { slideIndex } = this.state;
+    const { slideIndex, slidesArray } = this.state;
     let currentSlide = this.getSlide(slideIndex);
     return (
       <div className="home-container">
         <Header />
         <Menu />
         <div className="dots-container">
-          {[1, 2, 3, 4].map((dot, index) => (
+          {slidesArray.map((dot, index) => (
             <div key={index} className="dot-container">
               <div
                 className="dot"
