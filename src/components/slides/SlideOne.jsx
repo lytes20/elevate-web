@@ -115,7 +115,7 @@ export default function SlideOne() {
         <div className="branding-text" ref={brandingText}>
           <img src={brandingTextImage} alt="branding text" />
         </div>
-        <div className="split-letters-container">
+        <div className="slide-one-letters">
           <div className="letters">Let</div>
           &nbsp;
           <div className="letters">Ideas</div>

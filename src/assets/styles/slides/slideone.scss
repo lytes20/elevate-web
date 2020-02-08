@@ -77,7 +77,20 @@
   transform: rotate(30deg);
 }
 .show-bulb {
-  transform: translateY(0);
+  transform: translateY(-18%);
+}
+.slide-one-letters {
+  position: relative;
+  text-align: center;
+  color: rgb(127, 85, 0);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 21px;
+}
+
+.slide-one-letters div {
+  display: inline-block;
 }
 .letters {
   opacity: 0;
