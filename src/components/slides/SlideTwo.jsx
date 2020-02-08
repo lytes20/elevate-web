@@ -15,7 +15,6 @@ export default function SlideTwo() {
     showBulb();
     setTimeout(() => showSlide(), 0.2);
     return () => {
-      console.log('Clean up is called');
       clearTimeout(timeOutFunctionOne);
       clearTimeout(timeOutFunctionTwo);
       clearTimeout(timeOutFunctionThree);

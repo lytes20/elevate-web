@@ -22,7 +22,7 @@ const splitLetters = word => {
 };
 
 export default function SlideOne() {
-  const slideOneContainer = useRef(null)
+  const slideOneContainer = useRef(null);
   const bulbImageContainer = useRef(null);
   const brandingText = useRef(null);
   const bulbImageRef = useRef(null);
@@ -31,23 +31,24 @@ export default function SlideOne() {
   const slideOneContent = useRef(null);
   let letters = null;
   var lettersArray = [];
+  let timeOutFunctionOne = null;
+  let timeOutFunctionTwo = null;
 
-  useEffect(() => showBulb());
-  useEffect(() => handleMouseMovement());
   useEffect(() => {
     letters = document.getElementsByClassName('letters');
-    setTimeout(() => showSlide(), 0.2);
+    timeOutFunctionOne = setTimeout(() => showSlide(), 0.2);
+    showBulb();
+    handleMouseMovement();
     handleLettersAnimation();
     return () => {
-      // cleanup
+      clearTimeout(timeOutFunctionOne);
+      clearTimeout(timeOutFunctionTwo);
     };
   }, []);
 
   const showSlide = () => {
-    console.log('showSlide is called')
     slideOneContainer.current.classList.add('full-height');
-    console.log(slideOneContainer.current.classList)
-  }
+  };
   /**
    * Handles overall letter animation
    * @returns {void}
@@ -83,7 +84,7 @@ export default function SlideOne() {
    * @returns {void}
    */
   function showBulb() {
-    setTimeout(() => {
+    timeOutFunctionTwo = setTimeout(() => {
       brandingText.current.className += ' show-branding-text';
       bulbImageContainer.current.className += ' show-bulb';
     }, 1200);
