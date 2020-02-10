@@ -1,3 +1,4 @@
+// ---- Icons
 export { default as facebookIcon } from './icons/facebook.png';
 export { default as instagramIcon } from './icons/instagram.png';
 export { default as twitterIcon } from './icons/twitter.png';
@@ -7,7 +8,7 @@ export { default as footerTwitterIcon } from './icons/footer-twitter.png';
 export { default as pinIcon } from './icons/pin.png';
 export { default as phoneIcon } from './icons/phone.png';
 export { default as emailIcon } from './icons/envelope.png';
-
+export { default as closeIcon } from './icons/close.png';
 // ---- Image Assets
 export { default as bulbImage } from './images/bulb.png';
 export { default as smallBulb } from './images/bulb-small.png';

@@ -1,4 +1,4 @@
-import { OPEN_MENU, CLOSE_MENU } from './actionTypes';
+import { OPEN_MENU, CLOSE_MENU, TOGGLE_MENU } from './actionTypes';
 
 export const openMenuModel = () => {
   return {
@@ -8,6 +8,13 @@ export const openMenuModel = () => {
 export const closeMenuModel = () => {
   return {
     type: CLOSE_MENU
+  };
+};
+
+export const toggleMenu = (value) => {
+  return {
+    type: TOGGLE_MENU,
+    payload: value
   };
 };
 
