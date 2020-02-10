@@ -25,4 +25,6 @@ export { default as btlTextImage } from './images/text-btl.png';
 export { default as brandingTextImage } from './images/text-branding.png';
 
 // Gif Assets
-export { default as loveLovy } from './gifs/lovegiphy.gif'
+export { default as loveLovy } from './gifs/lovegiphy.gif';
+
+export { default as brandingTextBanner } from './images/text-banner-branding.png';

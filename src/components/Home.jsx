@@ -4,11 +4,10 @@ import '../assets/styles/home.scss';
 
 import { handleEndScroll, handleIsScrolling } from '../actions/appActions';
 import Header from './Header';
-import Menu from './Menu';
 import SocialMediaLinks from './SocialMediaLinks';
 import SlideOne from './slides/SlideOne';
 import SlideTwo from './slides/SlideTwo';
-import SlideThree from './slides/SlideThree';
+// import SlideThree from './slides/SlideThree';
 
 class Home extends React.Component {
   constructor(props) {
@@ -130,7 +129,6 @@ class Home extends React.Component {
     return (
       <div className="home-container">
         <Header />
-        <Menu />
         <div className="dots-container">
           {slidesArray.map((dot, index) => (
             <div key={index} className="dot-container">

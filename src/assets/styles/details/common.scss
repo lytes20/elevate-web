@@ -1,0 +1,23 @@
+.details-header {
+  width: 100%;
+  height: calc(100vh / 3);
+  position: relative;
+  box-sizing: border-box;
+  //   border: 1px solid red;
+}
+.details-header-image-container {
+  position: absolute;
+  width: 50%;
+  box-sizing: border-box;
+  top: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+//   border: 1px solid red;
+}
+.details-header-image-container img {
+  width: 100%;
+  height: 100%;
+}
+section {
+  height: 100vh;
+}
