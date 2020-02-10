@@ -3,7 +3,6 @@
   height: calc(100vh / 3);
   position: relative;
   box-sizing: border-box;
-  //   border: 1px solid red;
 }
 .details-header-image-container {
   position: absolute;
@@ -12,7 +11,7 @@
   top: 48px;
   left: 50%;
   transform: translateX(-50%);
-//   border: 1px solid red;
+  text-align: center;
 }
 .details-header-image-container img {
   width: 100%;
