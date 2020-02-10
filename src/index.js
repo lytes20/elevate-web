@@ -5,11 +5,11 @@ import { Provider } from 'react-redux';
 import configureStore from './config/configStore';
 
 import './index.css';
-import App from './App';
+import Routes from './routes';
 
 ReactDOM.render(
   <Provider store={configureStore()}>
-    <App />
+    <Routes />
   </Provider>,
   document.getElementById('root')
 );
