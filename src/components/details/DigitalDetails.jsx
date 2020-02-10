@@ -16,7 +16,7 @@ const DigitalDetails = () => {
             <img src={digitalTextImage} alt="text digital" />
           </div>
         </div>
-        <div>
+        <div className="details-text-container">
           <p>
             The digital medium is the platform where your brand can create the most connections, so we have adopted the way to distribute
             content via mobile, social and web to give them the best experience with your brand.

@@ -16,7 +16,7 @@ const BrandingDetails = () => {
             <img src={brandingTextBanner} alt="text branding" />
           </div>
         </div>
-        <div>
+        <div className="details-text-container">
           <p>
             At Elevate we take care of the creation, construction and development of the brand, we know that each one is different, and that
             is why it is important to know that it differentiates them from the others. We define the brand personality, its DNA, which we
