@@ -9,6 +9,7 @@ export { default as pinIcon } from './icons/pin.png';
 export { default as phoneIcon } from './icons/phone.png';
 export { default as emailIcon } from './icons/envelope.png';
 export { default as closeIcon } from './icons/close.png';
+
 // ---- Image Assets
 export { default as bulbImage } from './images/bulb.png';
 export { default as smallBulb } from './images/bulb-small.png';
@@ -19,6 +20,8 @@ export { default as digitalImage } from './images/digitalimage.png';
 export { default as clientLogos } from './images/clientlogos.png';
 export { default as heartMainImage } from './images/heartmain.png';
 export { default as smilingEmoji } from './images/smilingemoji.png';
+
+export { default as SlideOneBg } from './images/slider-bgs/slide1.jpg'
 
 export { default as digitalTextImage } from './images/digitalletters.png';
 export { default as btlTextImage } from './images/text-btl.png';

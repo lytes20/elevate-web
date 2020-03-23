@@ -67,7 +67,7 @@ export default function SlideOne() {
    */
   function showBulb() {
     timeOutFunctionTwo = setTimeout(() => {
-      brandingText.current.className += ' show-branding-text';
+      // brandingText.current.className += ' show-branding-text';
       bulbImageContainer.current.className += ' show-bulb';
     }, 1200);
   }
@@ -94,9 +94,9 @@ export default function SlideOne() {
         <div className="small-bulb-image-container right-bulb">
           <img src={smallBulb} alt="small bulb" ref={rightSmallBulbImageRef} />
         </div>
-        <div className="branding-text" ref={brandingText}>
+        {/* <div className="branding-text" ref={brandingText}>
           <img src={brandingTextImage} alt="branding text" />
-        </div>
+        </div> */}
         <div className="slide-one-letters">
           <div className="letters">Let</div>
           &nbsp;
