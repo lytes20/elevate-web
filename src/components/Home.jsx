@@ -77,7 +77,6 @@ class Home extends React.Component {
     // clearTimeout(this.timeoutFunction);
     this.setState(
       prevState => {
-        console.log(prevState);
         return { slideIndex: prevState.slideIndex - 1 };
       },
       () => this.getSlide(this.state.slideIndex)
