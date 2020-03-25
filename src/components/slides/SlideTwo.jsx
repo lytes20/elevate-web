@@ -60,7 +60,7 @@ export default function SlideTwo() {
   }
   function showBulb() {
     timeOutFunctionTwo = setTimeout(() => {
-      digitalTextContainer.current.className += ' show-digital-text';
+      // digitalTextContainer.current.className += ' show-digital-text';
       digitalImageContainer.current.className += ' show-heart';
     }, 1200);
     timeOutFunctionThree = setTimeout(() => {
@@ -70,9 +70,9 @@ export default function SlideTwo() {
   }
   return (
     <div className="slide-two-container" ref={slideTwoContainer}>
-      <div className="digital-text-container" ref={digitalTextContainer}>
+      {/* <div className="digital-text-container" ref={digitalTextContainer}>
         <img src={digitalTextImage} alt="digital text" />
-      </div>
+      </div> */}
       <div className="slide-two-letters">
         <div className="letters">Viralize</div>
         &nbsp;
