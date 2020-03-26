@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import '../../assets/styles/pages/brandingpage.scss';
 import '../../assets/styles/pages/commonpages.scss';
 import { mascotImage } from '../../assets';
@@ -12,8 +12,8 @@ export default function BrandingPage() {
     return () => {
       window.removeEventListener('scroll', scrollHandler);
     };
-  }, []);
-  const [inView, setInView] = useState(false);
+  });
+  // const [inView, setInView] = useState(false);
   const isInView = () => {
     if (brandingPageRef.current) {
       const rect = brandingPageRef.current.getBoundingClientRect();

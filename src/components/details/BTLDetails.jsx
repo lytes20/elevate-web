@@ -3,7 +3,6 @@ import { btlTextImage } from '../../assets';
 import '../../assets/styles/details/common.scss';
 import '../../assets/styles/details/btldetails.scss';
 
-import Footer from '../Footer';
 import Header from '../Header';
 
 const BTLDetails = () => {

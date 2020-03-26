@@ -3,7 +3,6 @@ import { digitalTextImage } from '../../assets';
 import '../../assets/styles/details/common.scss';
 import '../../assets/styles/details/digitaldetails.scss';
 
-import Footer from '../Footer';
 import Header from '../Header';
 
 const DigitalDetails = () => {

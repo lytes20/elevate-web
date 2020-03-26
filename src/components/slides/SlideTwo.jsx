@@ -1,12 +1,12 @@
 import React, { useRef, useEffect } from 'react';
 import '../../assets/styles/slides/slidetwo.scss';
-import { heartMainImage, digitalTextImage, loveLovy, smilingEmoji } from '../../assets';
+import { heartMainImage, loveLovy, smilingEmoji } from '../../assets';
 import { splitLetters } from '../../utils';
 
 export default function SlideTwo() {
   const slideTwoContainer = useRef(null);
   const digitalImageContainer = useRef(null);
-  const digitalTextContainer = useRef(null);
+  // const digitalTextContainer = useRef(null);
   const heartImage = useRef(null);
   const emojiImageContainer = useRef(null);
   let letters = null;

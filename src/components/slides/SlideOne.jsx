@@ -1,12 +1,12 @@
 import React, { useRef, useEffect } from 'react';
 import '../../assets/styles/slides/slideone.scss';
-import { bulbImage, brandingTextImage, smallBulb } from '../../assets';
+import { bulbImage, smallBulb } from '../../assets';
 import { splitLetters } from '../../utils';
 
 export default function SlideOne() {
   const slideOneContainer = useRef(null);
   const bulbImageContainer = useRef(null);
-  const brandingText = useRef(null);
+  // const brandingText = useRef(null);
   const bulbImageRef = useRef(null);
   const leftSmallBulbImageRef = useRef(null);
   const rightSmallBulbImageRef = useRef(null);

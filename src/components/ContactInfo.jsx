@@ -17,7 +17,7 @@ export default function ContactInfo() {
         <li key={index}>
           <div className="contact-info-container">
             <div className="icon">
-              <img src={contactInfo.icon} />
+              <img src={contactInfo.icon} alt="icon"/>
             </div>
             <p>{contactInfo.details}</p>
           </div>

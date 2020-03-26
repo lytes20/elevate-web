@@ -9,7 +9,7 @@ import Menu from './Menu';
 import { openMenuModel, toggleMenu } from '../actions/appActions';
 
 const Header = props => {
-  const { isScrolling, openMenuModel, openMenu, toggleMenu } = props;
+  const { isScrolling, openMenu, toggleMenu } = props;
   const handleToggleMenu = () => {
     toggleMenu(!openMenu);
   };
