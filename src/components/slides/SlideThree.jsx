@@ -1,11 +1,7 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import '../../assets/styles/slides/slidethree.scss';
-import { btlTextImage } from '../../assets';
 
 export default function SlideThree() {
-  const digitalImageContainer = useRef(null);
-  const digitalTextContainer = useRef(null);
-  const heartImage = useRef(null);
 
   //   useEffect(() => showBulb());
   //   function showBulb() {
@@ -20,9 +16,9 @@ export default function SlideThree() {
   return (
     <div className="slide-three-container">
       <div className="slide-three-banner">
-        <div className="btl-image-text-container" ref={digitalTextContainer}>
+        {/* <div className="btl-image-text-container" ref={digitalTextContainer}>
           <img src={btlTextImage} alt="btl text" />
-        </div>
+        </div> */}
         <div className="split-letters-container">
           <div>tangible </div>
           <div>creativity</div>

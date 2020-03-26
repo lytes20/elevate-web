@@ -7,7 +7,7 @@ import Header from './Header';
 import SocialMediaLinks from './SocialMediaLinks';
 import SlideOne from './slides/SlideOne';
 import SlideTwo from './slides/SlideTwo';
-// import SlideThree from './slides/SlideThree';
+import SlideThree from './slides/SlideThree';
 
 class Home extends React.Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class Home extends React.Component {
       slides: document.getElementsByClassName('slides'),
       dots: document.getElementsByClassName('dot'),
       tooltips: document.getElementsByClassName('tool-tip'),
-      slidesArray: [<SlideOne />, <SlideTwo />]
+      slidesArray: [<SlideOne />, <SlideTwo />, <SlideThree />]
     };
     this.timeoutFunction = null;
     // this.currentSlide = null;
