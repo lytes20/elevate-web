@@ -1,7 +1,15 @@
 .slide-three-container {
   width: 100%;
   height: 100%;
+  transform: translateY(50rem);
+  transition: transform 1s;
 }
+
+.full-height {
+  height: 100% !important;
+  transform: translateY(0);
+}
+
 .slide-three-banner {
   background-color: transparent;
   background-repeat: no-repeat;
@@ -30,4 +38,37 @@
 .btl-image-text-container img {
   width: 100%;
   height: 100%;
+}
+
+.slide-three-letters {
+  position: relative;
+  text-align: center;
+  color: rgb(127, 85, 0);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 21px;
+}
+
+.slide-three-letters div {
+  display: inline-block;
+}
+
+.letters {
+  opacity: 0;
+  font-size: 21px;
+}
+.letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+.letter.behind {
+  transform: rotateY(-90deg);
+}
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
