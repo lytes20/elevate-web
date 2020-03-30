@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../assets/styles/menu.scss';
 import { toggleMenu } from '../actions/appActions';
+import { navigationLinks } from '../utils/constants';
 
 function Menu(props) {
   const { openMenu, toggleMenu } = props;
@@ -11,26 +12,13 @@ function Menu(props) {
     <div className={styleclass}>
       <div className="menu-list-container">
         <ul>
-          <li>
-            <Link to="/" onClick={() => toggleMenu(false)}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/branding" onClick={() => toggleMenu(false)}>
-              Branding
-            </Link>
-          </li>
-          <li>
-            <Link to="/btl" onClick={() => toggleMenu(false)}>
-              BTL
-            </Link>
-          </li>
-          <li>
-            <Link to="/digital" onClick={() => toggleMenu(false)}>
-              DIGITAL
-            </Link>
-          </li>
+          {navigationLinks.map(navLink => (
+            <li key={navLink.name}>
+              <Link to={navLink.path} onClick={() => toggleMenu(false)}>
+                {navLink.name}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
