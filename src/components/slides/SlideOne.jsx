@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import '../../assets/styles/slides/slideone.scss';
-import { bulbImage, smallBulb } from '../../assets';
+import { bulbImage, smallBulb, logoLimeGreen } from '../../assets';
 import { splitLetters } from '../../utils';
 
 export default function SlideOne() {
@@ -94,9 +94,15 @@ export default function SlideOne() {
         <div className="small-bulb-image-container right-bulb">
           <img src={smallBulb} alt="small bulb" ref={rightSmallBulbImageRef} />
         </div>
-        {/* <div className="branding-text" ref={brandingText}>
-          <img src={brandingTextImage} alt="branding text" />
-        </div> */}
+        <div className="logo-container right-logo">
+          <img src={logoLimeGreen} alt="logo"/>
+        </div>
+        <div className="logo-container left-logo">
+          <img src={logoLimeGreen} alt="logo"/>
+        </div>
+        <div className="logo-container bottom-left-logo">
+          <img src={logoLimeGreen} alt="logo"/>
+        </div>
         <div className="slide-one-letters">
           <div className="letters">Let</div>
           &nbsp;

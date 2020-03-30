@@ -31,3 +31,6 @@ export { default as brandingTextImage } from './images/text-branding.png';
 export { default as loveLovy } from './gifs/lovegiphy.gif';
 
 export { default as brandingTextBanner } from './images/text-banner-branding.png';
+
+
+export { default as logoLimeGreen } from './images/animated-icons/elevate_logo_lime_green.png';
