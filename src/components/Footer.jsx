@@ -1,7 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import '../assets/styles/footer.scss';
 import FooterMediaLinks from './FooterMediaLinks';
 import ContactInfo from './ContactInfo';
+import { navigationLinks } from '../utils/constants';
 
 export default function Footer() {
   // function createData() {}
@@ -14,8 +17,10 @@ export default function Footer() {
       </div>
 
       <ul>
-        {footerLinks.map(footerLink => (
-          <li key={footerLink}>{footerLink}</li>
+        {navigationLinks.map(navLink => (
+          <li key={navLink.name}>
+            <Link to={navLink.path}>{navLink.name}</Link>
+          </li>
         ))}
       </ul>
       <div className="footer-contact-info">

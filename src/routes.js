@@ -8,9 +8,9 @@ const routes = () => {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={LandingPage} />
-        <Route path="/branding" component={BrandingDetails} />
+        <Route path="/creative-production" component={BrandingDetails} />
         <Route path="/digital" component={DigitalDetails} />
-        <Route path="/btl" component={BTLDetails} />
+        <Route path="/ui-ux" component={BTLDetails} />
       </Switch>
     </BrowserRouter>
   );
