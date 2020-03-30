@@ -25,7 +25,7 @@ export default function Footer() {
         <FooterMediaLinks />
       </div>
       <div className="footer-tag-line">
-        <p>Our work is done to provide the best service More than 10 years of experience support our work</p>
+        <p>Our work is done to provide the best service</p>
       </div>
       <div className="rights-container">Elevate Ug - All rights reserved</div>
     </footer>

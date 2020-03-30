@@ -7,9 +7,9 @@ export default function ContactInfo() {
     return { details, icon };
   }
   const contactInfoDetails = [
-    createData('Acacia Mall fourth floor', pinIcon),
-    createData('(+256) 752 229 343', phoneIcon),
-    createData('gideonbamuleseyo@gmil.com', emailIcon)
+    createData('4th floor Block C, Lugogo House, Plot 42 lugogo Bypass, Kampala Uganda', pinIcon),
+    createData('(+256) 786 691 088', phoneIcon),
+    createData('info@elevateug.com', emailIcon)
   ];
   return (
     <ul className="">
