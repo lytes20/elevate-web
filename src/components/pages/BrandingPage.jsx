@@ -35,7 +35,7 @@ export default function BrandingPage() {
       <div>
         <div className="pages-main" ref={brandingPageRef}>
           <div className="page-title-container pages-content">
-            <h2 className="branding-h2">Branding</h2>
+            <h2 className="branding-h2">UI/UX Design</h2>
             <div className="pages-p-container">
               <p className="branding-p">
                 We take care of the creation, construction and development of the brand, we know that each one is different, so it is

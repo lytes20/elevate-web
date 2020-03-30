@@ -29,7 +29,7 @@ export default class BTLPage extends React.Component {
               <img src={mediaImage} alt="media" className="btl-image" />
             </div>
             <div className="btl-text-container btl-content">
-              <h2 className="btl-h2">BTL</h2>
+              <h2 className="btl-h2">Creative Content</h2>
               <div className="pages-p-container">
                 <p className="btl-p">
                   We specialize in creating unique concepts for our clients, thanks to our handling in large events, we have the confidence
