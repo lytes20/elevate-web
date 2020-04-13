@@ -103,13 +103,13 @@ export default function SlideOne() {
         <div className="logo-container bottom-left-logo">
           <img src={logoLimeGreen} alt="logo"/>
         </div>
-        <div className="slide-one-letters">
+        {/* <div className="slide-one-letters">
           <div className="letters">Let</div>
           &nbsp;
           <div className="letters">Ideas</div>
           &nbsp;
           <div className="letters">Fly</div>
-        </div>
+        </div> */}
         <div className="bulb-image-container" ref={bulbImageContainer}>
           <img src={bulbImage} alt="bulb" className="bulb-image" ref={bulbImageRef} />
         </div>
