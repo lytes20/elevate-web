@@ -18,7 +18,6 @@ export { default as mascotImage } from './images/mascot.png';
 export { default as mediaImage } from './images/mediaimage.png';
 export { default as digitalImage } from './images/digitalimage.png';
 export { default as clientLogos } from './images/clientlogos.png';
-export { default as heartMainImage } from './images/heartmain.png';
 export { default as smilingEmoji } from './images/smilingemoji.png';
 
 export { default as SlideOneBg } from './images/slider-bgs/slide1.jpg'
@@ -33,4 +32,7 @@ export { default as loveLovy } from './gifs/lovegiphy.gif';
 export { default as brandingTextBanner } from './images/text-banner-branding.png';
 
 
+// New Icons
 export { default as logoLimeGreen } from './images/animated-icons/elevate_logo_lime_green.png';
+export { default as instaLike } from './images/animated-icons/insta_like.png';
+export { default as heartMainImage } from './images/animated-icons/heart.png';

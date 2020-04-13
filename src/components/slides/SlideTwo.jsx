@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import '../../assets/styles/slides/slidetwo.scss';
-import { heartMainImage, loveLovy, smilingEmoji } from '../../assets';
+import { heartMainImage, instaLike, logoLimeGreen } from '../../assets';
 import { splitLetters } from '../../utils';
 
 export default function SlideTwo() {
@@ -8,7 +8,6 @@ export default function SlideTwo() {
   const digitalImageContainer = useRef(null);
   // const digitalTextContainer = useRef(null);
   const heartImage = useRef(null);
-  const emojiImageContainer = useRef(null);
   let letters = null;
   var lettersArray = [];
 
@@ -65,35 +64,33 @@ export default function SlideTwo() {
     }, 1200);
     timeOutFunctionThree = setTimeout(() => {
       heartImage.current.classList.remove('imageSpin');
-      emojiImageContainer.current.className += ' move-emoji'
     }, 1800);
   }
   return (
     <div className="slide-two-container" ref={slideTwoContainer}>
-      {/* <div className="digital-text-container" ref={digitalTextContainer}>
-        <img src={digitalTextImage} alt="digital text" />
-      </div> */}
-      <div className="slide-two-letters">
-        <div className="letters">Viralize</div>
-        &nbsp;
-        <div className="letters">Your</div>
-        &nbsp;
-        <div className="letters">Brand</div>
+      <div className="logo-container right-logo">
+        <img src={logoLimeGreen} alt="logo" />
+      </div>
+      <div className="logo-container left-logo">
+        <img src={logoLimeGreen} alt="logo" />
+      </div>
+      <div className="logo-container bottom-left-logo">
+        <img src={logoLimeGreen} alt="logo" />
+      </div>
+      <div className="insta-like-container right-insta-like">
+        <img src={instaLike} alt="insta-like" />
+      </div>
+      <div className="insta-like-container left-insta-like">
+        <img src={instaLike} alt="insta-like" />
+      </div>
+      <div className="insta-like-container bottom-left-insta-like">
+        <img src={instaLike} alt="insta-like" />
       </div>
       <div className="overlay">
         <div className="hearts" ref={digitalImageContainer}>
           <div className="hearts-container">
-            <div className="love-gif-container love-gif-left">
-              <img src={loveLovy} alt="double-tap" />
-            </div>
             <div className="heart-image-container">
-              <div className="emoji-image-container" ref={emojiImageContainer}>
-                <img src={smilingEmoji} alt="smiling emoji" className="emoji-image" />
-              </div>
               <img className="heart-image imageSpin" src={heartMainImage} alt="heart main" ref={heartImage} />
-            </div>
-            <div className="love-gif-container love-gif-right">
-              <img src={loveLovy} alt="double-tap" />
             </div>
           </div>
         </div>
