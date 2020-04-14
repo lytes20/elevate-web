@@ -70,7 +70,7 @@ export default function SlideThree() {
         <div className="pencil-img-container">
           <img src={pencil} alt="insta-like" />
         </div>
-        <div className="insta-like-container bottom-left-insta-like">
+        <div className="tri-ruler-image-container">
           <img src={triRuler} alt="insta-like" />
         </div>
         <div className="overlay">

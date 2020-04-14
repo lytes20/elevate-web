@@ -61,7 +61,6 @@
 .letter {
   display: inline-block;
   position: relative;
-  float: left;
   transform: translateZ(25px);
   transform-origin: 50% 50% 25px;
 }
@@ -82,8 +81,8 @@
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  
-  img{
+
+  img {
     width: 100%;
     height: 100%;
   }
@@ -93,10 +92,23 @@
   position: absolute;
   width: 20vw;
   height: 19vw;
-  // z-index: 10;
   top: 26%;
   left: 50%;
   transform: translate(-50%, -50%);
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.tri-ruler-image-container {
+  position: absolute;
+  width: 20vw;
+  height: 19vw;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+
   img {
     width: 100%;
     height: 100%;
