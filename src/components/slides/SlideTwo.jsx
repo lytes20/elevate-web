@@ -90,7 +90,7 @@ export default function SlideTwo() {
         <div className="hearts" ref={digitalImageContainer}>
           <div className="hearts-container">
             <div className="heart-image-container">
-              <img className="heart-image imageSpin" src={heartMainImage} alt="heart main" ref={heartImage} />
+              <img className="heart-image" src={heartMainImage} alt="heart main" ref={heartImage} />
             </div>
           </div>
         </div>
