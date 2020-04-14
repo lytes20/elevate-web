@@ -1,12 +1,12 @@
 .social-media-links {
-//   border: 1px solid green;
+  //   border: 1px solid green;
   position: absolute;
   top: 30%;
   right: 2%;
   z-index: 1;
 }
 .social-media-link-container {
-//   border: 1px solid yellow;
+  margin-bottom: 10px;
 }
 .social-media-link-container div {
   cursor: pointer;
@@ -25,8 +25,8 @@
   opacity: 0.8;
 }
 
-.social-media-link-container div:hover {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-  }
+.social-media-link-container:hover {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}

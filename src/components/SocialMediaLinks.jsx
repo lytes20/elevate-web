@@ -17,7 +17,9 @@ export default function SocialMediaLinks() {
         {elevateSocialMediaPlatforms.map((socialMedia, index) => (
           <li key={index} className="social-media-link-container">
             <div>
+              <a href={socialMedia.url} target="_blank">
                 <img src={socialMedia.icon} alt={socialMedia.name} />
+              </a>
             </div>
           </li>
         ))}
