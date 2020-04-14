@@ -88,3 +88,17 @@
     height: 100%;
   }
 }
+
+.pencil-img-container {
+  position: absolute;
+  width: 20vw;
+  height: 19vw;
+  // z-index: 10;
+  top: 26%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

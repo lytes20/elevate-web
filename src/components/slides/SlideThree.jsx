@@ -67,7 +67,7 @@ export default function SlideThree() {
         <div className="insta-like-container right-insta-like">
           <img src={eraser} alt="insta-like" />
         </div>
-        <div className="insta-like-container left-insta-like">
+        <div className="pencil-img-container">
           <img src={pencil} alt="insta-like" />
         </div>
         <div className="insta-like-container bottom-left-insta-like">
