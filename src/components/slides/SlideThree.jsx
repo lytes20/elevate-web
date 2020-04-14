@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import '../../assets/styles/slides/slidethree.scss';
+import { uiUxMain, pencil, triRuler, eraser, logoGray } from '../../assets';
 import { splitLetters } from '../../utils';
 
 export default function SlideThree() {
@@ -54,31 +55,30 @@ export default function SlideThree() {
   return (
     <div className="slide-three-container" ref={slideThreeContainer}>
       <div className="slide-three-banner">
-        {/* <div className="btl-image-text-container" ref={digitalTextContainer}>
-          <img src={btlTextImage} alt="btl text" />
-        </div> */}
-        <div className="slide-three-letters">
-          <div className="letters">Tangible</div>
-          &nbsp;
-          <div className="letters">Creativity</div>
+        <div className="logo-container right-logo">
+          <img src={logoGray} alt="logo" />
         </div>
-      </div>
-
-      {/* <div className="overlay">
-        <div className="hearts" ref={digitalImageContainer}>
-          <div className="hearts-container">
-            <div className="love-gif-container love-gif-left">
-              <img src={loveLovy} alt="double-tap" />
-            </div>
-            <div className="heart-image-container">
-              <img className="imageSpin" src={heartMainImage} alt="heart main" ref={heartImage} />
-            </div>
-            <div className="love-gif-container love-gif-right">
-              <img src={loveLovy} alt="double-tap" />
-            </div>
+        <div className="logo-container left-logo">
+          <img src={logoGray} alt="logo" />
+        </div>
+        <div className="logo-container bottom-left-logo">
+          <img src={logoGray} alt="logo" />
+        </div>
+        <div className="insta-like-container right-insta-like">
+          <img src={eraser} alt="insta-like" />
+        </div>
+        <div className="insta-like-container left-insta-like">
+          <img src={pencil} alt="insta-like" />
+        </div>
+        <div className="insta-like-container bottom-left-insta-like">
+          <img src={triRuler} alt="insta-like" />
+        </div>
+        <div className="overlay">
+          <div className="ui-ux-img-container">
+            <img src={uiUxMain} alt="ui ux main" />
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }

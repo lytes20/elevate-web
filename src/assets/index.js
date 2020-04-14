@@ -34,5 +34,10 @@ export { default as brandingTextBanner } from './images/text-banner-branding.png
 
 // New Icons
 export { default as logoLimeGreen } from './images/animated-icons/elevate_logo_lime_green.png';
+export { default as logoGray } from './images/animated-icons/elevate_logo.png';
 export { default as instaLike } from './images/animated-icons/insta_like.png';
 export { default as heartMainImage } from './images/animated-icons/heart.png';
+export { default as eraser } from './images/animated-icons/eraser.png';
+export { default as triRuler } from './images/animated-icons/tria.png';
+export { default as pencil } from './images/animated-icons/pencil.png';
+export { default as uiUxMain } from './images/animated-icons/uiuxmain.png';
