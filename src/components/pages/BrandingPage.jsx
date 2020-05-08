@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+
 import '../../assets/styles/pages/brandingpage.scss';
 import '../../assets/styles/pages/commonpages.scss';
 import { mascotImage } from '../../assets';
@@ -32,12 +33,12 @@ export default function BrandingPage() {
 
   return (
     <div className="pages branding-page-container">
-      <div>
-        <div className="pages-main" ref={brandingPageRef}>
-          <div className="page-title-container pages-content">
+      <div className="UIUX-content">
+        <div className="UIUX-main" ref={brandingPageRef}>
+          <div className="UIUX-title">
             <h2 className="branding-h2">UI/UX Design</h2>
-            <div className="pages-p-container">
-              <p className="branding-p">
+            <div className="UIUX-desc-container">
+              <p className="UIUX-desc">
                 We take care of the creation, construction and development of the brand, we know that each one is different, so it is
                 important to know that essence that makes them different from the others. Finding the DNA of your brand is our purpose.
               </p>
@@ -45,7 +46,7 @@ export default function BrandingPage() {
 
             <button className="see-more-button branding-btn">see more</button>
           </div>
-          <div className="pages-image-container pages-content">
+          <div className="UIUX-image-container">
             <img src={mascotImage} alt="sit-relax" ref={mascotImageRef} />
           </div>
         </div>
