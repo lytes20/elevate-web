@@ -2,13 +2,13 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  z-index: 9999
+  z-index: 9999;
 }
 .header-dark-background {
   background: rgba(0, 0, 0, 0.5);
   padding: 10px;
-  -webkit-transition: .4s; /* For Safari 3.1 to 6.0 */
-  transition: .4s;
+  -webkit-transition: 0.4s; /* For Safari 3.1 to 6.0 */
+  transition: 0.4s;
 }
 .sticky {
   position: fixed;
@@ -25,4 +25,45 @@ header {
 
 .header-menu-button img {
   width: 100%;
+}
+
+.icon-bars {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 1999;
+  cursor: pointer;
+}
+.icon-bar {
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: #000;
+  background-color: #f2f2f2;
+  backface-visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.icon-bar-top {
+  margin-top: -8px;
+}
+.icon-bar-top-toggle {
+  margin-top: 0 !important;
+  transform: rotate(45deg);
+}
+.icon-bar-middle {
+  opacity: 1;
+}
+.icon-bar-middle-toggle {
+  opacity: 0;
+}
+.icon-bar-bottom {
+  margin-top: 8px;
+}
+.icon-bar-bottom-toggle {
+  margin-top: 0 !important;
+  transform: rotate(-45deg);
 }

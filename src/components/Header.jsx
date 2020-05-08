@@ -24,9 +24,11 @@ const Header = props => {
 
         {/* menu icon */}
         <div>
-          <button className="header-menu-button" onClick={() => handleToggleMenu()}>
-            <img src={openMenu ? closeIcon : menuButton} alt="menu" />
-          </button>
+          <div className="icon-bars" onClick={() => handleToggleMenu()}>
+            <span className={`icon-bar ${openMenu ? "icon-bar-top-toggle" : "icon-bar-top "}`}></span>
+            <span className={`icon-bar ${openMenu ? "icon-bar-middle-toggle" : "icon-bar-middle"}`}></span>
+            <span className={`icon-bar ${openMenu ? "icon-bar-bottom-toggle" : "icon-bar-bottom"}`}></span>
+          </div>
         </div>
       </header>
       <Menu />
