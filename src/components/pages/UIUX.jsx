@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 
 import { Link } from 'react-router-dom';
 
-import '../../assets/styles/pages/brandingpage.scss';
+import '../../assets/styles/pages/uiux.scss';
 import '../../assets/styles/pages/commonpages.scss';
 import { mascotImage, UIUXImage } from '../../assets';
 import { brandingTags } from '../../utils/constants';
