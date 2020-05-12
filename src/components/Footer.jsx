@@ -5,6 +5,7 @@ import '../assets/styles/footer.scss';
 import FooterMediaLinks from './FooterMediaLinks';
 import ContactInfo from './ContactInfo';
 import { navigationLinks } from '../utils/constants';
+import { elevateLogo } from '../assets'; 
 
 export default function Footer() {
   // function createData() {}
@@ -12,8 +13,8 @@ export default function Footer() {
   const footerLinks = ['Home', 'Branding', 'Digital', 'BTL'];
   return (
     <footer>
-      <div className="logo">
-        <h1>Elevate Ug</h1>
+      <div className="Footer-logo">
+        <img src={elevateLogo} />
       </div>
 
       <ul>
