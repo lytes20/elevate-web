@@ -4,7 +4,7 @@ import '../assets/styles/landingpage.scss';
 import Home from './Home';
 import BottomPage from './BottomPage';
 import PartnersPage from './pages/PartnersPage';
-import BrandingPage from './pages/BrandingPage';
+import UIUX from './pages/UIUX';
 import CreativeContent from './pages/CreativeContent';
 import DigitalPage from './pages/DigitalPage';
 
@@ -15,7 +15,7 @@ function LandingPage() {
         <Home />
       </section>
       <section className="section-two">
-        <BrandingPage />
+        <UIUX />
       </section>
       <section className="section-three">
         <CreativeContent />

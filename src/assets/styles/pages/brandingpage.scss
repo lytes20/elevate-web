@@ -1,59 +1,59 @@
-.branding-page-container {
-  background: linear-gradient(45deg, rgba(28, 49, 58, 1) 0%, rgba(28, 49, 58, 1) 51%, rgba(255, 221, 0, 1) 51%, rgba(255, 221, 0, 1) 100%);
+.UIUX-container {
+  background: white;
+  height: 100%;
+  width: 100%;
+  padding: 80px;
+  @media (max-width: 992px) {
+    padding: 10px;
+  }
+
+  .UIUX-content {
+    height: 100%;
+    display: flex;
+    // @media (max-width: 992px) {
+    //   flex-direction: column;
+    // }
+  }
+
+  .UIUX-h2 {
+    font-size: 5vw;
+    span {
+      color: #5146af;
+    }
+  }
+}
+
+.UIUX-wording-container {
   display: grid;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 
-.branding-h2 {
-  color: #ffff60;
-}
-.branding-text-container {
-  text-align: center;
-}
-.mascot-image-container {
-  box-sizing: border-box;
+.UIUX-image-container {
+  @media (max-width: 992px) {
+    height: 100%;
+    width: 100%;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    @media (max-width: 992px) {
+      height: 100%;
+      width: 100%;
+    }
+  }
 }
 
-.UIUX-title {
-  padding-left: 80px;
-}
 .UIUX-desc-container {
-  width: 70%;
-  margin-bottom: 20px;
-  padding: 20px 50px 20px 50px;
-  background-color: rgba(0, 0, 0, 0.22);
-  border-radius: 10px 10px 10px 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: black;
 }
 
 .UIUX-desc {
-  color: #ffffcc;
   font-size: 0.8rem;
 }
-.branding-btn {
-  background: #ffdd01;
-  color: #493200;
-}
-
-.branding-tags-container ul li:not(:last-child) {
-  border-right: 1px solid #ffdf00;
-  margin-right: 40px;
-  padding-right: 40px;
-}
-.branding-tags {
-  color: #ffdf00;
-  font-size: 14px;
-}
-
-// .UIUX-content {
-// }
-
-.UIUX-main {
-  display: flex;
-}
-
-.UIUX-image-container img {
-  max-width: 100%;
-  height: auto;
+.UIUX-see-more-btn {
+  background: #5146af;
+  color: white;
 }

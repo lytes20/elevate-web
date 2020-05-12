@@ -43,3 +43,5 @@ export { default as pencil } from './images/animated-icons/pencil.png';
 export { default as uiUxMain } from './images/animated-icons/uiuxmain.png';
 
 export { default as elevateLogo } from './images/elevate-logo-white.png';
+
+export { default as UIUXImage } from './images/UI-UX-icon.png';
