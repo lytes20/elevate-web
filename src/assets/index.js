@@ -20,7 +20,7 @@ export { default as digitalImage } from './images/digitalimage.png';
 export { default as clientLogos } from './images/clientlogos.png';
 export { default as smilingEmoji } from './images/smilingemoji.png';
 
-export { default as SlideOneBg } from './images/slider-bgs/slide1.jpg'
+export { default as SlideOneBg } from './images/slider-bgs/slide1.jpg';
 
 export { default as digitalTextImage } from './images/digitalletters.png';
 export { default as btlTextImage } from './images/text-btl.png';
@@ -30,7 +30,6 @@ export { default as brandingTextImage } from './images/text-branding.png';
 export { default as loveLovy } from './gifs/lovegiphy.gif';
 
 export { default as brandingTextBanner } from './images/text-banner-branding.png';
-
 
 // New Icons
 export { default as logoLimeGreen } from './images/animated-icons/elevate_logo_lime_green.png';
@@ -45,3 +44,4 @@ export { default as uiUxMain } from './images/animated-icons/uiuxmain.png';
 export { default as elevateLogo } from './images/elevate-logo-white.png';
 
 export { default as UIUXImage } from './images/UI-UX-icon.png';
+export { default as creativeProductionImage } from './images/Creative-Production-icon.png';
