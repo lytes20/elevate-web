@@ -41,3 +41,5 @@ export { default as eraser } from './images/animated-icons/eraser.png';
 export { default as triRuler } from './images/animated-icons/tria.png';
 export { default as pencil } from './images/animated-icons/pencil.png';
 export { default as uiUxMain } from './images/animated-icons/uiuxmain.png';
+
+export { default as elevateLogo } from './images/elevate-logo-white.png';

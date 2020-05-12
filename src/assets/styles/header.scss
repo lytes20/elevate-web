@@ -1,14 +1,21 @@
 header {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 30px 80px;
   z-index: 9999;
+  @media (max-width: 992px) {
+    padding: 10px;
+  }
 }
 .header-dark-background {
   background: rgba(0, 0, 0, 0.5);
   padding: 10px;
   -webkit-transition: 0.4s; /* For Safari 3.1 to 6.0 */
   transition: 0.4s;
+  padding: 10px 80px;
+  @media (max-width: 992px) {
+    padding: 10px;
+  }
 }
 .sticky {
   position: fixed;
@@ -66,4 +73,12 @@ header {
 .icon-bar-bottom-toggle {
   margin-top: 0 !important;
   transform: rotate(-45deg);
+}
+
+.Header-logo-container {
+  width: 50px;
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
