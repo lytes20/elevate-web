@@ -1,3 +1,16 @@
+.SMM {
+  .SMM-h2 {
+    font-size: 4vw;
+    .social-media {
+      color: #4385f4;
+    }
+  }
+
+  .SMM-see-more-btn {
+    background-color: #ee5e43;
+    color: white;
+  }
+}
 .digital-page-container {
   background: linear-gradient(
     45deg,
@@ -18,14 +31,4 @@
 .digital-btn {
   background: #62efff;
   color: #493200;
-}
-
-.digital-tags-container ul li:not(:last-child) {
-  border-right: 1px solid #62efff;
-  margin-right: 40px;
-  padding-right: 40px;
-}
-.digital-tags {
-  color: #62efff;
-  font-size: 14px;
 }

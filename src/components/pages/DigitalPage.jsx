@@ -1,37 +1,33 @@
 import React from 'react';
+
+import { Link } from 'react-router-dom';
+
 import '../../assets/styles/pages/commonpages.scss';
 import '../../assets/styles/pages/digitalpage.scss';
-import { digitalImage } from '../../assets';
-import { digitalTags } from '../../utils/constants';
+import { socialMediaImage } from '../../assets';
 
 export default function DigitalPage() {
   return (
-    <div className="pages digital-page-container">
-      <div>
-        <div className="pages-main">
-          <div className="page-title-container pages-content">
-            <h2 className="digital-h2">digital</h2>
-            <div className="pages-p-container">
-              <p className="digital-p">
-                We carry out social media, SEO (web positioning), SEM, corporate website design, online stores and we enhance your social
-                networks with the latest graphic design techniques and tools, to respond to the user experience.
+    <div className="UIUX-container SMM">
+      <div className="UIUX-content">
+        <div className="UIUX-wording-container">
+          <div>
+            <h2 className="SMM-h2">
+              <span className="social-media">Social Media</span> Management
+            </h2>
+            <div className="UIUX-desc-container">
+              <p className="UIUX-desc">
+                We take care of the creation, construction and development of the brand, we know that each one is different, so it is
+                important to know that essence that makes them different from the others. Finding the DNA of your brand is our purpose.
               </p>
             </div>
-
-            <button className="see-more-button digital-btn">see more</button>
-          </div>
-          <div className="pages-image-container pages-content">
-            <img src={digitalImage} alt="digital" />
+            <Link className="see-more-button SMM-see-more-btn" to="/ui-ux">
+              Learn more
+            </Link>
           </div>
         </div>
-        <div className="pages-tags-container digital-tags-container">
-          <ul>
-            {digitalTags.map(tag => (
-              <li key={tag}>
-                <p className="digital-tags">{tag}</p>
-              </li>
-            ))}
-          </ul>
+        <div className="UIUX-image-container">
+          <img src={socialMediaImage} alt="ui-ux" />
         </div>
       </div>
     </div>
