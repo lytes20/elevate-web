@@ -3,8 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import '../../assets/styles/pages/creativecontent.scss';
-import { mediaImag, creativeProductionImage } from '../../assets';
-import { BTLTags } from '../../utils/constants';
+import { creativeProductionHeading, creativeProductionImage } from '../../assets';
 
 export default class BTLPage extends React.Component {
   constructor(props) {
@@ -32,9 +31,9 @@ export default class BTLPage extends React.Component {
           </div>
           <div className="UIUX-wording-container">
             <div>
-              <h2 className="UIUX-h2 CreativeContent-h2">
-                <span className="creative">Creative</span> & <span className="digital">Digital</span> Content
-              </h2>
+              <div className="UIUX-heading-image-container">
+                <img src={creativeProductionHeading} alt="Creative Digital content" />
+              </div>
               <div className="UIUX-desc-container">
                 <p className="UIUX-desc  CreativeContent-desc">
                   We take care of the creation, construction and development of the brand, we know that each one is different, so it is

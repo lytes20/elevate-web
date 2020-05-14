@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 
 import '../../assets/styles/pages/uiux.scss';
 import '../../assets/styles/pages/commonpages.scss';
-import { mascotImage, UIUXImage } from '../../assets';
-import { brandingTags } from '../../utils/constants';
+import { UIUXHeading, UIUXImage } from '../../assets';
 
 export default function BrandingPage() {
   const mascotImageRef = useRef(null);
@@ -38,9 +37,9 @@ export default function BrandingPage() {
       <div className="UIUX-content">
         <div className="UIUX-wording-container">
           <div>
-            <h2 className="UIUX-h2">
-              UI/UX <span>Design</span>
-            </h2>
+            <div className="UIUX-heading-image-container">
+              <img src={UIUXHeading} alt="Creative Digital content" />
+            </div>
             <div className="UIUX-desc-container">
               <p className="UIUX-desc">
                 We take care of the creation, construction and development of the brand, we know that each one is different, so it is

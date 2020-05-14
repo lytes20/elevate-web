@@ -46,3 +46,7 @@ export { default as elevateLogo } from './images/elevate-logo-white.png';
 export { default as UIUXImage } from './images/UI-UX-icon.png';
 export { default as creativeProductionImage } from './images/Creative-Production-icon.png';
 export { default as socialMediaImage } from './images/SMM.png';
+
+export { default as socialMediaHeading } from './images/SocialManagementLabel.png';
+export { default as creativeProductionHeading } from './images/CreativeLabel.png';
+export { default as UIUXHeading } from './images/UIUXLabel.png';

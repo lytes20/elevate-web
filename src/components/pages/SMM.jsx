@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import '../../assets/styles/pages/commonpages.scss';
 import '../../assets/styles/pages/digitalpage.scss';
-import { socialMediaImage } from '../../assets';
+import { socialMediaHeading, socialMediaImage } from '../../assets';
 
 export default function DigitalPage() {
   return (
@@ -12,9 +12,9 @@ export default function DigitalPage() {
       <div className="UIUX-content">
         <div className="UIUX-wording-container">
           <div>
-            <h2 className="SMM-h2">
-              <span className="social-media">Social Media</span> Management
-            </h2>
+            <div className="UIUX-heading-image-container">
+              <img src={socialMediaHeading} alt="Creative Digital content" />
+            </div>
             <div className="UIUX-desc-container">
               <p className="UIUX-desc">
                 We take care of the creation, construction and development of the brand, we know that each one is different, so it is
