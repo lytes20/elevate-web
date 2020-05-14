@@ -6,7 +6,7 @@ import BottomPage from './BottomPage';
 import PartnersPage from './pages/PartnersPage';
 import UIUX from './pages/UIUX';
 import CreativeContent from './pages/CreativeContent';
-import DigitalPage from './pages/DigitalPage';
+import SocialMediaManagement from './pages/SMM';
 
 function LandingPage() {
   return (
@@ -21,7 +21,7 @@ function LandingPage() {
         <CreativeContent />
       </section>
       <section className="section-four">
-        <DigitalPage />
+        <SocialMediaManagement />
       </section>
       <section className="section-five">
         <PartnersPage />

@@ -21,7 +21,7 @@ export default function DigitalPage() {
                 important to know that essence that makes them different from the others. Finding the DNA of your brand is our purpose.
               </p>
             </div>
-            <Link className="see-more-button SMM-see-more-btn" to="/ui-ux">
+            <Link className="see-more-button SMM-see-more-btn" to="/social-medial-management">
               Learn more
             </Link>
           </div>

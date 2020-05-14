@@ -41,7 +41,7 @@ export default class BTLPage extends React.Component {
                   important to know that essence that makes them different from the others. Finding the DNA of your brand is our purpose.
                 </p>
               </div>
-              <Link className="see-more-button CreativeContent-see-more-btn" to="/ui-ux">
+              <Link className="see-more-button CreativeContent-see-more-btn" to="/creative-production">
                 Learn more
               </Link>
             </div>
