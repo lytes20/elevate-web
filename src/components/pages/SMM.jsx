@@ -11,7 +11,7 @@ export default function DigitalPage() {
     <div className="UIUX-container SMM">
       <div className="UIUX-content">
         <div className="UIUX-wording-container">
-          <div className="UIUX-wording-contents">
+          <div className="UIUX-wording-contents left-contents">
             <div className="UIUX-heading-image-container">
               <img src={socialMediaHeading} alt="Creative Digital content" />
             </div>

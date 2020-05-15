@@ -3,6 +3,10 @@
   max-height: 100vh;
   width: 100%;
   padding: 120px;
+
+  .left-contents {
+    margin-right: 80px;
+  }
   @media (max-width: 992px) {
     padding: 10px;
     height: 100vh;
@@ -36,6 +40,7 @@
 }
 
 .UIUX-wording-container {
+  flex-basis: 100%;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -47,8 +52,6 @@
 
   .UIUX-wording-contents {
     // border: 1px solid purple;
-    width: 70%;
-    // justify-self: end;
     @media (max-width: 992px) {
       margin: 0 auto;
     }
@@ -56,6 +59,7 @@
 }
 
 .UIUX-image-container {
+  flex-basis: 100%;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -87,4 +91,18 @@
 .UIUX-see-more-btn {
   background: #5146af;
   color: white;
+}
+
+.special-case {
+  position: absolute;
+  top: 100vh;
+  right: 120px;
+  // border: 1px solid red;
+  img {
+    width: 80%;
+  }
+  @media (max-width: 992px) {
+    position: static;
+    margin: 0 auto;
+  }
 }

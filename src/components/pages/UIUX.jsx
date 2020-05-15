@@ -7,36 +7,26 @@ import '../../assets/styles/pages/commonpages.scss';
 import { UIUXHeading, UIUXImage } from '../../assets';
 
 export default function BrandingPage() {
-  const mascotImageRef = useRef(null);
-  const brandingPageRef = useRef(null);
+  const uiUxImageContainer = useRef(null);
+  const specialCase = useRef(null);
+
   useEffect(() => {
-    window.addEventListener('scroll', scrollHandler);
+    console.log(uiUxImageContainer.current.left);
+    specialCase.current.style.cssText = `
+      width: ${uiUxImageContainer.current.clientWidth}px;
+      `;
     return () => {
-      window.removeEventListener('scroll', scrollHandler);
+      specialCase.current.style.cssText = `
+      width: ${uiUxImageContainer.current.clientWidth}px;
+      `;
     };
   });
-  // const [inView, setInView] = useState(false);
-  const isInView = () => {
-    if (brandingPageRef.current) {
-      const rect = brandingPageRef.current.getBoundingClientRect();
-      return rect.top < window.innerHeight && rect.bottom >= 0;
-    }
-    return false;
-  };
-  const scrollHandler = () => {
-    // if (isInView()) {
-    //   mascotImageRef.current.style.cssText = `
-    //   transform: translateX(-${window.pageYOffset / 5}px);
-    //   `;
-    //   return;
-    // }
-  };
 
   return (
     <div className="UIUX-container">
       <div className="UIUX-content">
         <div className="UIUX-wording-container">
-          <div className="UIUX-wording-contents">
+          <div className="UIUX-wording-contents left-contents">
             <div className="UIUX-heading-image-container">
               <img src={UIUXHeading} alt="Creative Digital content" />
             </div>
@@ -51,8 +41,10 @@ export default function BrandingPage() {
             </Link>
           </div>
         </div>
-        <div className="UIUX-image-container">
-          <img src={UIUXImage} alt="ui-ux" ref={mascotImageRef} />
+        <div className="UIUX-image-container" ref={uiUxImageContainer}>
+          <div className="special-case" ref={specialCase}>
+            <img src={UIUXImage} alt="ui-ux" />
+          </div>
         </div>
       </div>
     </div>

@@ -18,7 +18,9 @@
     background-color: white;
   }
 
-  .UIUX-wording-contents {
-    justify-self: end !important;
+  .creative-image {
+    @media (max-width: 992px) {
+      margin: 0 auto;
+    }
   }
 }

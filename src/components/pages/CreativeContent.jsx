@@ -27,10 +27,12 @@ export default class BTLPage extends React.Component {
       <div className="UIUX-container CreativeContent">
         <div className="UIUX-content">
           <div className="UIUX-image-container">
-            <img src={creativeProductionImage} alt="ui-ux" />
+            <div className="left-contents creative-image">
+              <img src={creativeProductionImage} alt="ui-ux" />
+            </div>
           </div>
           <div className="UIUX-wording-container">
-            <div className="UIUX-wording-contents">
+            <div className="UIUX-wording-contents right-contents">
               <div className="UIUX-heading-image-container">
                 <img src={creativeProductionHeading} alt="Creative Digital content" />
               </div>
