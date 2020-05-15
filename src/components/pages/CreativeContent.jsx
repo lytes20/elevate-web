@@ -30,7 +30,7 @@ export default class BTLPage extends React.Component {
             <img src={creativeProductionImage} alt="ui-ux" />
           </div>
           <div className="UIUX-wording-container">
-            <div>
+            <div className="UIUX-wording-contents">
               <div className="UIUX-heading-image-container">
                 <img src={creativeProductionHeading} alt="Creative Digital content" />
               </div>

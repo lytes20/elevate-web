@@ -36,7 +36,7 @@ export default function BrandingPage() {
     <div className="UIUX-container">
       <div className="UIUX-content">
         <div className="UIUX-wording-container">
-          <div>
+          <div className="UIUX-wording-contents">
             <div className="UIUX-heading-image-container">
               <img src={UIUXHeading} alt="Creative Digital content" />
             </div>
