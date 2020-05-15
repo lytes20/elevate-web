@@ -14,15 +14,15 @@ function LandingPage() {
       <section className="section-one">
         <Home />
       </section>
-      <section className="section-two">
+      <div className="section-two">
         <UIUX />
-      </section>
-      <section className="section-three">
+      </div>
+      <div className="section-three">
         <CreativeContent />
-      </section>
-      <section className="section-four">
+      </div>
+      <div className="section-four">
         <SocialMediaManagement />
-      </section>
+      </div>
       <section className="section-five">
         <PartnersPage />
       </section>
