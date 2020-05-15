@@ -2,19 +2,24 @@
   background: white;
   height: 100%;
   width: 100%;
-  padding: 80px;
+  padding: 120px;
   @media (max-width: 992px) {
     padding: 10px;
   }
 
   .UIUX-heading-image-container {
     img {
-      width: 100%;
+      width: 80%;
+      @media (max-width: 992px) {
+        height: auto;
+        width: 50%;
+      }
     }
   }
   .UIUX-content {
     height: 100%;
     display: flex;
+    justify-content: space-between;
     @media (max-width: 992px) {
       display: table;
     }
@@ -39,15 +44,18 @@
 }
 
 .UIUX-image-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
   @media (max-width: 992px) {
     display: table-row;
     text-align: center;
   }
   img {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: auto;
     @media (max-width: 992px) {
-      height: auto;
+      max-height: 100%;
       width: 50%;
     }
   }
