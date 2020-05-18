@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 
 import '../../assets/styles/pages/brandingpage.scss';
 import '../../assets/styles/pages/commonpages.scss';
-import { mascotImage } from '../../assets';
+import { uiUxImage } from '../../assets';
 import { brandingTags } from '../../utils/constants';
 
 export default function BrandingPage() {
@@ -47,7 +47,7 @@ export default function BrandingPage() {
             <button className="see-more-button branding-btn">see more</button>
           </div>
           <div className="UIUX-image-container">
-            <img src={mascotImage} alt="sit-relax" ref={mascotImageRef} />
+            <img src={uiUxImage} alt="sit-relax" ref={mascotImageRef} />
           </div>
         </div>
 
