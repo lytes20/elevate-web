@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import '../../assets/styles/slides/slidetwo.scss';
-import { heartMainImage, instaLike, logoLimeGreen } from '../../assets';
+import { smmLabel ,heartMainImage, instaLike, logoLimeGreen } from '../../assets';
 import { splitLetters } from '../../utils';
 
 export default function SlideTwo() {
@@ -85,6 +85,9 @@ export default function SlideTwo() {
       </div>
       <div className="insta-like-container bottom-left-insta-like">
         <img src={instaLike} alt="insta-like" />
+      </div>
+      <div className="SlideTwo-label">
+        <img src={smmLabel} alt="creative-content-label" />
       </div>
       <div className="overlay">
         <div className="hearts" ref={digitalImageContainer}>

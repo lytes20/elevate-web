@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import '../../assets/styles/slides/slidethree.scss';
-import { uiUxMain, pencil, triRuler, eraser, logoGray } from '../../assets';
+import { uiUxLabel ,uiUxMain, pencil, triRuler, eraser, logoGray } from '../../assets';
 import { splitLetters } from '../../utils';
 
 export default function SlideThree() {
@@ -72,6 +72,9 @@ export default function SlideThree() {
         </div>
         <div className="tri-ruler-image-container">
           <img src={triRuler} alt="insta-like" />
+        </div>
+        <div className="SlideThree-label">
+          <img src={uiUxLabel} alt="creative-content-label" />
         </div>
         <div className="overlay">
           <div className="ui-ux-img-container">
