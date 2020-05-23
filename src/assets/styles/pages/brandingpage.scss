@@ -1,5 +1,11 @@
 .branding-page-container {
-  background: linear-gradient(45deg, rgba(28, 49, 58, 1) 0%, rgba(28, 49, 58, 1) 51%, rgba(255, 221, 0, 1) 51%, rgba(255, 221, 0, 1) 100%);
+  background: linear-gradient(
+    45deg,
+    rgba(28, 49, 58, 1) 0%,
+    rgba(28, 49, 58, 1) 51%,
+    rgba(181, 188, 33, 1) 51%,
+    rgba(181, 188, 33, 1) 100%
+  );
   display: grid;
   justify-content: center;
   align-items: center;
@@ -7,7 +13,7 @@
 }
 
 .branding-h2 {
-  color: #ffff60;
+  color: #b2bc21d9;
 }
 .branding-text-container {
   text-align: center;
@@ -18,10 +24,11 @@
 
 .UIUX-title {
   padding-left: 80px;
+  text-align: center;
 }
 .UIUX-desc-container {
   width: 70%;
-  margin-bottom: 20px;
+  margin: 20px auto;
   padding: 20px 50px 20px 50px;
   background-color: rgba(0, 0, 0, 0.22);
   border-radius: 10px 10px 10px 10px;
@@ -32,8 +39,8 @@
   font-size: 0.8rem;
 }
 .branding-btn {
-  background: #ffdd01;
-  color: #493200;
+  background: #b2bc21d9;
+  color: white;
 }
 
 .branding-tags-container ul li:not(:last-child) {
@@ -53,7 +60,9 @@
   display: flex;
 }
 
-.UIUX-image-container img {
-  max-width: 100%;
-  height: auto;
+.UIUX-image-container {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
