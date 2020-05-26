@@ -2,6 +2,7 @@ import React from 'react';
 
 import HeaderDetails from '../details/HeaderDetails';
 import ProjectItem from '../details/ProjectItem';
+import FooterDetail from '../details/FooterDetail';
 import TeamItem from '../TeamItem';
 
 import '../../assets/styles/pages/aboutus.scss';
@@ -9,9 +10,10 @@ import '../../assets/styles/pages/aboutus.scss';
 import { whoWeAreBlurb, team } from '../../utils/constants';
 
 function AboutUs() {
+  const bgColor = '#164F95';
   return (
     <div className="AboutUs">
-      <HeaderDetails bgColor="#164F95" />
+      <HeaderDetails bgColor={bgColor} />
       <ProjectItem project={whoWeAreBlurb} index={0} titleColor="gray" />
       <div className="team-container">
         <div>
@@ -23,6 +25,7 @@ function AboutUs() {
           ))}
         </div>
       </div>
+      <FooterDetail bgColor={bgColor} />
     </div>
   );
 }
