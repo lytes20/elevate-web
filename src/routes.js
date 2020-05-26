@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
 import { UIUXDetails, DigitalDetails } from './components/details';
+import AboutUs from './components/pages/AboutUs'
 
 const routes = () => {
   return (
@@ -11,6 +12,7 @@ const routes = () => {
         <Route path="/creative-production" component={UIUXDetails} />
         <Route path="/digital" component={DigitalDetails} />
         <Route path="/ui-ux" component={UIUXDetails} />
+        <Route path="/about-us" component={AboutUs} />
       </Switch>
     </BrowserRouter>
   );

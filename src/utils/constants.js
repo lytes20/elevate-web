@@ -4,7 +4,8 @@ export const navigationLinks = [
   { path: '/', name: 'Home' },
   { path: '/creative-production', name: 'Creative Production' },
   { path: '/digital', name: 'Digital' },
-  { path: '/ui-ux', name: 'UI/UX' }
+  { path: '/ui-ux', name: 'UI/UX' },
+  { path: '/about-us', name: 'About Us' }
 ];
 
 export const brandingTags = ['Brand management', 'Strategic design', 'Packaging', '360 campaigns'];
