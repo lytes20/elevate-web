@@ -48,3 +48,5 @@ export { default as uiUxImage } from './images/ui-ux-image.png';
 export { default as creativeContentLabel } from './images/creative-content-label.png';
 export { default as smmLabel } from './images/smm-label.png';
 export { default as uiUxLabel } from './images/ui-ux-label.png';
+
+export { default as placeHolderOne } from './images/GideonBamuleseyo.jpg';

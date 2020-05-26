@@ -1,0 +1,29 @@
+.ProjectItem {
+  padding: 0 80px;
+  width: 100%;
+  margin-top: 80px;
+  .ProjectItem-contents {
+    display: flex;
+    margin: 0 auto;
+    width: 70vw;
+    .project-image {
+      img {
+        width: 100%;
+      }
+    }
+    .project-desc {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      width: 65%;
+      .desc{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        p{
+          font-size: 12px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}

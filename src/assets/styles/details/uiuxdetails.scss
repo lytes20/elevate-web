@@ -1,0 +1,24 @@
+.branding-header {
+  // background-image: linear-gradient(180deg, #ffdf00 83%, #1c313a 83%);
+}
+
+$bg-height: 100vh;
+$bg-color: #b5bc21;
+
+.branding-header {
+  margin: -($bg-height / 2) auto 0;
+  width: 100%;
+  height: $bg-height;
+  overflow: hidden;
+  border-radius: 0 0 70% 70%;
+  background-color: $bg-color;
+}
+
+.featured-projects-title {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  h1 {
+    color: gray;
+  }
+}
