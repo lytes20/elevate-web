@@ -25,7 +25,6 @@
   box-sizing: border-box;
 }
 .project-container {
-  cursor: pointer;
   flex: 1;
   position: relative;
 }
@@ -37,7 +36,6 @@
   opacity: 0;
 }
 .project-container:hover .project-div {
-  cursor: pointer;
   flex: 1;
   width: 100%;
   position: absolute;
@@ -45,23 +43,23 @@
   height: 94%;
   opacity: 1;
 }
-.project-container:hover .branding-div {
-  background-color: rgba(255, 221, 0, 1);
+.project-container:hover .one-div {
+  background-color: #B5BC21;
 }
-.project-container:hover .btl-div {
+.project-container:hover .two-div {
   background-color: rgba(255, 15, 73, 1);
   color: white !important;
 }
-.project-container:hover .digital-div {
+.project-container:hover .three-div {
   background-color: rgba(98, 239, 255, 1);
 }
-.project-container:hover .project-div span {
+.project-container:hover .project-div a {
   opacity: 1;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 1.5em;
   font-weight: 500;
 }
