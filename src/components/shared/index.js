@@ -1,7 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const HeaderImage = styled.div`
-  width: 50%;
+  ${props => `
+    width: ${props.width}%;
+    `}
   margin: 0 auto;
   display: flex;
   position: absolute;

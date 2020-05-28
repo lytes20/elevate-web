@@ -18,7 +18,7 @@ const CreativeContentDetails = () => {
       <Header />
       <div>
         <HeaderDetails bgImage={creativeContentBg}>
-          <HeaderImage>
+          <HeaderImage width={50}>
             <HeaderImageContainer>
               <img src={creativeContentLabel} alt="text branding" />
             </HeaderImageContainer>

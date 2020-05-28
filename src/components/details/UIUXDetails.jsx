@@ -17,7 +17,7 @@ const UIUXDetails = () => {
       <Header />
       <div>
         <HeaderDetails bgImage={uiUxDetailsBg}>
-          <HeaderImage>
+          <HeaderImage width={50}>
             <HeaderImageContainer>
               <img src={uiUxLabel} alt="text branding" />
             </HeaderImageContainer>

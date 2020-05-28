@@ -6,9 +6,10 @@ import HeaderDetails from './HeaderDetails';
 import ProjectItem from './ProjectItem';
 
 import { uiUxProjects } from '../../utils/constants';
-import { brandingTextBanner, smmBg } from '../../assets';
+import { smmBg, smmLabel } from '../../assets';
 import '../../assets/styles/details/common.scss';
 import '../../assets/styles/details/uiuxdetails.scss';
+import { HeaderImage, HeaderImageContainer } from '../shared';
 
 const socialMediaManagementColor = '#11c0ce';
 const SocialMediaManagementDetails = () => {
@@ -17,9 +18,11 @@ const SocialMediaManagementDetails = () => {
       <Header />
       <div>
         <HeaderDetails bgImage={smmBg}>
-          <div className="details-header-image-container">
-            <img src={brandingTextBanner} alt="text branding" />
-          </div>
+          <HeaderImage width={25}>
+            <HeaderImageContainer>
+              <img src={smmLabel} alt="text branding" />
+            </HeaderImageContainer>
+          </HeaderImage>
         </HeaderDetails>
         <div className="featured-projects-title">
           <h1>
