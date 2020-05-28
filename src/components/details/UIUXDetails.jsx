@@ -1,24 +1,25 @@
 import React from 'react';
-import { brandingTextBanner } from '../../assets';
-import '../../assets/styles/details/common.scss';
-import '../../assets/styles/details/uiuxdetails.scss';
 
 import Header from '../Header';
 import FooterDetail from './FooterDetail';
+import HeaderDetails from './HeaderDetails';
 import ProjectItem from './ProjectItem';
 
 import { uiUxProjects } from '../../utils/constants';
+import { brandingTextBanner, uiUxDetailsBg } from '../../assets';
+import '../../assets/styles/details/common.scss';
+import '../../assets/styles/details/uiuxdetails.scss';
 
 const UIUXDetails = () => {
   return (
     <div>
       <Header />
       <div>
-        <div className="details-header branding-header">
+        <HeaderDetails bgImage={uiUxDetailsBg}>
           <div className="details-header-image-container">
             <img src={brandingTextBanner} alt="text branding" />
           </div>
-        </div>
+        </HeaderDetails>
         <div className="featured-projects-title">
           <h1>
             Featured <br />

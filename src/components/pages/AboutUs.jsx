@@ -8,7 +8,7 @@ import FooterDetail from '../details/FooterDetail';
 import TeamItem from '../TeamItem';
 
 import '../../assets/styles/pages/aboutus.scss';
-
+import { aboutUsBg } from '../../assets';
 import { whoWeAreBlurb, team, approachSteps } from '../../utils/constants';
 
 const SectionContainer = styled.div`
@@ -62,7 +62,7 @@ function AboutUs() {
   const bgColor = '#164F95';
   return (
     <div className="AboutUs">
-      <HeaderDetails bgColor={bgColor} />
+      <HeaderDetails bgColor={bgColor} bgImage={aboutUsBg} />
       <ProjectItem project={whoWeAreBlurb} index={0} titleColor="gray" />
       <div className="team-container">
         <div className="team-container-heading">
