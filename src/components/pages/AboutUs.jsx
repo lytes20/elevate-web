@@ -16,7 +16,7 @@ function AboutUs() {
       <HeaderDetails bgColor={bgColor} />
       <ProjectItem project={whoWeAreBlurb} index={0} titleColor="gray" />
       <div className="team-container">
-        <div>
+        <div className="team-container-heading">
           <h1>Our Team</h1>
         </div>
         <div className="team-images-container">

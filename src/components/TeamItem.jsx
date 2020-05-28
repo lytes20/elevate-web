@@ -2,6 +2,8 @@ import React from 'react';
 
 import styled from 'styled-components';
 
+import '../assets/styles/teamitem.scss';
+
 const MemberImageContainer = styled.div`
   flex: 1;
   & img {
@@ -12,7 +14,7 @@ const MemberImageContainer = styled.div`
 function TeamItem(props) {
   const { member } = props;
   return (
-    <div>
+    <div className="TeamItem">
       <MemberImageContainer>
         <img src={member.image} alt={member.name} />
       </MemberImageContainer>

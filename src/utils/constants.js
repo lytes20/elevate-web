@@ -45,39 +45,33 @@ export const whoWeAreBlurb = {
 
 export const team = [
   {
-    path: '/',
     image: placeHolderOne,
     name: 'Jason Kigozi',
     role: 'Creative Director'
   },
   {
-    path: '/creative-production',
     image: placeHolderOne,
-    name: 'Kanzu Banking App',
-    role: 'Creative Director'
+    name: 'Nasasira Arnold',
+    role: "Business Dev't & Accounts"
   },
   {
-    path: '/digital',
     image: placeHolderOne,
-    name: 'Chap Chap App',
-    role: 'Creative Director'
+    name: 'Arthur Nangai',
+    role: 'Operations'
   },
   {
-    path: '/',
     image: placeHolderOne,
-    name: 'Jason Kigozi',
-    role: 'Creative Director'
+    name: 'Tandeka Mutebi',
+    role: 'Social Media Manager'
   },
   {
-    path: '/creative-production',
     image: placeHolderOne,
-    name: 'Kanzu Banking App',
-    role: 'Creative Director'
+    name: 'Rona Katusiime',
+    role: 'Design Lead'
   },
   {
-    path: '/digital',
     image: placeHolderOne,
-    name: 'Chap Chap App',
-    role: 'Creative Director'
+    name: 'Liberty Muhereza',
+    role: 'Copyrighter'
   }
 ];

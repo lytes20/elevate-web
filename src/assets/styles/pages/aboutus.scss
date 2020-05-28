@@ -1,8 +1,24 @@
 .AboutUs {
   .team-container {
     background-color: #164f95;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    .team-container-heading {
+      width: 70vw;
+      margin: 0 auto 40px;
+      h1 {
+        color: white;
+      }
+    }
   }
   .team-images-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 60px;
+    width: 70vw;
+    margin: 0 auto;
   }
 }
