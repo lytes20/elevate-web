@@ -49,7 +49,7 @@ export { default as creativeContentLabel } from './images/creative-content-label
 export { default as smmLabel } from './images/smm-label.png';
 export { default as uiUxLabel } from './images/ui-ux-label.png';
 
-export { default as placeHolderOne } from './images/GideonBamuleseyo.jpg';
+export { default as placeHolderOne } from './images/placeholder.png';
 
 export { default as uiUxDetailsBg } from './images/uiuxbg.png';
 export { default as aboutUsBg } from './images/aboutusbg.png';
