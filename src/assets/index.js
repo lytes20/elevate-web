@@ -54,3 +54,4 @@ export { default as placeHolderOne } from './images/GideonBamuleseyo.jpg';
 export { default as uiUxDetailsBg } from './images/uiuxbg.png';
 export { default as aboutUsBg } from './images/aboutusbg.png';
 export { default as creativeContentBg } from './images/creativecontentbg.png';
+export { default as smmBg } from './images/smmbg.png';
