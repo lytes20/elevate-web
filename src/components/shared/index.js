@@ -16,6 +16,7 @@ export const HeaderImage = styled.div`
 
 export const HeaderImageContainer = styled.div`
   flex: 1;
+  text-align: center;
   & img {
     width: 100%;
   }

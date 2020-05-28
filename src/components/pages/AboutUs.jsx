@@ -2,6 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
+import Header from '../Header';
 import HeaderDetails from '../details/HeaderDetails';
 import ProjectItem from '../details/ProjectItem';
 import FooterDetail from '../details/FooterDetail';
@@ -10,6 +11,7 @@ import TeamItem from '../TeamItem';
 import '../../assets/styles/pages/aboutus.scss';
 import { aboutUsBg } from '../../assets';
 import { whoWeAreBlurb, team, approachSteps } from '../../utils/constants';
+import { HeaderImage, HeaderImageContainer } from '../shared';
 
 const SectionContainer = styled.div`
   padding-top: 80px;
@@ -55,14 +57,25 @@ const Para = styled.p`
 `;
 
 const Step = styled.h1`
-  color: #164f95;
+  ${props => `
+      color: ${props.color};
+    `}
 `;
 
 function AboutUs() {
   const bgColor = '#164F95';
   return (
     <div className="AboutUs">
-      <HeaderDetails bgColor={bgColor} bgImage={aboutUsBg} />
+      <Header />
+      <HeaderDetails bgColor={bgColor} bgImage={aboutUsBg}>
+        <HeaderImage width={50}>
+          <HeaderImageContainer>
+            <Step color="#ffffff" style={{ fontSize: '6vw' }}>
+              about us
+            </Step>
+          </HeaderImageContainer>
+        </HeaderImage>
+      </HeaderDetails>
       <ProjectItem project={whoWeAreBlurb} index={0} titleColor="gray" />
       <div className="team-container">
         <div className="team-container-heading">
@@ -90,7 +103,9 @@ function AboutUs() {
           </Desc>
           <div>
             {approachSteps.map(approachStep => (
-              <Step key={approachStep}>{approachStep}</Step>
+              <Step key={approachStep} color="#164f95">
+                {approachStep}
+              </Step>
             ))}
           </div>
         </SectionDetailsContainer>
