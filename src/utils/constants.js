@@ -75,3 +75,5 @@ export const team = [
     role: 'Copyrighter'
   }
 ];
+
+export const approachSteps = ['Define', 'Identify', 'Visualize', 'Elevate'];
