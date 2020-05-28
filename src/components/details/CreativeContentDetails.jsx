@@ -6,9 +6,10 @@ import HeaderDetails from './HeaderDetails';
 import ProjectItem from './ProjectItem';
 
 import { uiUxProjects } from '../../utils/constants';
-import { brandingTextBanner, creativeContentBg } from '../../assets';
+import { creativeContentBg, creativeContentLabel, bulbImage } from '../../assets';
 import '../../assets/styles/details/common.scss';
 import '../../assets/styles/details/uiuxdetails.scss';
+import { HeaderImage, HeaderImageContainer } from '../shared';
 
 const creativeContentColor = '#F7243E';
 const CreativeContentDetails = () => {
@@ -17,9 +18,14 @@ const CreativeContentDetails = () => {
       <Header />
       <div>
         <HeaderDetails bgImage={creativeContentBg}>
-          <div className="details-header-image-container">
-            <img src={brandingTextBanner} alt="text branding" />
-          </div>
+          <HeaderImage>
+            <HeaderImageContainer>
+              <img src={creativeContentLabel} alt="text branding" />
+            </HeaderImageContainer>
+            <HeaderImageContainer>
+              <img src={bulbImage} alt="text branding" />
+            </HeaderImageContainer>
+          </HeaderImage>
         </HeaderDetails>
         <div className="featured-projects-title">
           <h1>

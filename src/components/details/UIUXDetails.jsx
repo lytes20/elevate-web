@@ -1,7 +1,5 @@
 import React from 'react';
 
-import styled from 'styled-components';
-
 import Header from '../Header';
 import FooterDetail from './FooterDetail';
 import HeaderDetails from './HeaderDetails';
@@ -11,25 +9,7 @@ import { uiUxProjects } from '../../utils/constants';
 import { uiUxLabel, uiUxMain, uiUxDetailsBg } from '../../assets';
 import '../../assets/styles/details/common.scss';
 import '../../assets/styles/details/uiuxdetails.scss';
-
-const HeaderImage = styled.div`
-  width: 50%;
-  margin: 0 auto;
-  display: flex;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  justify-content: center;
-  align-items: center;
-`;
-
-const HeaderImageContainer = styled.div`
-  flex: 1;
-  & img {
-    width: 100%;
-  }
-`;
+import { HeaderImage, HeaderImageContainer } from '../shared';
 
 const UIUXDetails = () => {
   return (
