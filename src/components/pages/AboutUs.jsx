@@ -57,6 +57,7 @@ const Para = styled.p`
 `;
 
 const Step = styled.h1`
+  text-transform: capitalize;
   ${props => `
       color: ${props.color};
     `}
