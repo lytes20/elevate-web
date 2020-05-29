@@ -1,12 +1,23 @@
-import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter, Route, Switch, useLocation } from 'react-router-dom';
+
 import LandingPage from './components/LandingPage';
 import { UIUXDetails, SocialMediaManagementDetails, CreativeContentDetails } from './components/details';
 import AboutUs from './components/pages/AboutUs';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 const routes = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Switch>
         <Route path="/" exact component={LandingPage} />
         <Route path="/creative-content" component={CreativeContentDetails} />
