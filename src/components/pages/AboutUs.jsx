@@ -83,8 +83,8 @@ function AboutUs() {
           <h1>Our Team</h1>
         </div>
         <div className="team-images-container">
-          {team.map(member => (
-            <TeamItem member={member} />
+          {team.map((member, index) => (
+            <TeamItem key={index} member={member} />
           ))}
         </div>
       </div>
