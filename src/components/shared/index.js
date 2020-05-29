@@ -21,3 +21,11 @@ export const HeaderImageContainer = styled.div`
     width: 100%;
   }
 `;
+
+export const GridContainer = styled.div`
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding-left: 80px;
+  text-align: center;
+`;

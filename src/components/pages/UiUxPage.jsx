@@ -4,6 +4,7 @@ import '../../assets/styles/pages/brandingpage.scss';
 import '../../assets/styles/pages/commonpages.scss';
 import { uiUxImage } from '../../assets';
 import { brandingTags } from '../../utils/constants';
+import { GridContainer } from '../shared';
 
 export default function BrandingPage() {
   const mascotImageRef = useRef(null);
@@ -25,7 +26,7 @@ export default function BrandingPage() {
   const scrollHandler = () => {
     if (isInView()) {
       mascotImageRef.current.style.cssText = `
-      transform: translateX(-${window.pageYOffset / 5}px);
+      transform: translateX(-${window.pageYOffset / 8}px);
       `;
       return;
     }
@@ -35,17 +36,19 @@ export default function BrandingPage() {
     <div className="pages branding-page-container">
       <div className="UIUX-content">
         <div className="UIUX-main" ref={brandingPageRef}>
-          <div className="UIUX-title">
-            <h2 className="branding-h2">UI UX Design</h2>
-            <div className="UIUX-desc-container">
-              <p className="UIUX-desc">
-                We take care of the creation, construction and development of the brand, we know that each one is different, so it is
-                important to know that essence that makes them different from the others. Finding the DNA of your brand is our purpose.
-              </p>
-            </div>
+          <GridContainer>
+            <div>
+              <h2 className="branding-h2">UI UX Design</h2>
+              <div className="UIUX-desc-container">
+                <p className="UIUX-desc">
+                  We take care of the creation, construction and development of the brand, we know that each one is different, so it is
+                  important to know that essence that makes them different from the others. Finding the DNA of your brand is our purpose.
+                </p>
+              </div>
 
-            <button className="see-more-button branding-btn">see more</button>
-          </div>
+              <button className="see-more-button branding-btn">see more</button>
+            </div>
+          </GridContainer>
           <div className="UIUX-image-container">
             <img src={uiUxImage} alt="sit-relax" ref={mascotImageRef} />
           </div>
