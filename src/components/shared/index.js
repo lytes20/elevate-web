@@ -29,3 +29,11 @@ export const GridContainer = styled.div`
   padding-left: 80px;
   text-align: center;
 `;
+
+export const DescContainer = styled.div`
+  width: 70%;
+  margin: 20px auto 30px;
+  padding: 20px 50px 20px 50px;
+  background-color: rgba(0, 0, 0, 0.22);
+  border-radius: 10px 10px 10px 10px;
+`;

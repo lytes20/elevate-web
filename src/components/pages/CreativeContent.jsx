@@ -1,7 +1,11 @@
 import React from 'react';
+
+import { Link } from 'react-router-dom';
+
 import '../../assets/styles/pages/btlpage.scss';
 import { mediaImage } from '../../assets';
 import { BTLTags } from '../../utils/constants';
+import { DescContainer } from '../shared';
 
 export default class BTLPage extends React.Component {
   constructor(props) {
@@ -30,15 +34,17 @@ export default class BTLPage extends React.Component {
             </div>
             <div className="btl-text-container btl-content">
               <h2 className="btl-h2">Creative Content</h2>
-              <div className="pages-p-container">
+              <DescContainer>
                 <p className="btl-p">
                   We specialize in creating unique concepts for our clients, thanks to our handling in large events, we have the confidence
                   and security of offering them the best service. We have, in our staff, account executives, art directors, creative
                   directors and long-running executive producers.
                 </p>
-              </div>
+              </DescContainer>
 
-              <button className="see-more-button btl-btn">see more</button>
+              <Link to="/creative-content" className="see-more-button btl-btn">
+                see more
+              </Link>
             </div>
           </div>
 

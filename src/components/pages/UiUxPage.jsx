@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 
+import { Link } from 'react-router-dom';
+
 import '../../assets/styles/pages/brandingpage.scss';
 import '../../assets/styles/pages/commonpages.scss';
 import { uiUxImage } from '../../assets';
 import { brandingTags } from '../../utils/constants';
-import { GridContainer } from '../shared';
+import { GridContainer, DescContainer } from '../shared';
 
 export default function BrandingPage() {
   const mascotImageRef = useRef(null);
@@ -39,14 +41,16 @@ export default function BrandingPage() {
           <GridContainer>
             <div>
               <h2 className="branding-h2">UI UX Design</h2>
-              <div className="UIUX-desc-container">
+              <DescContainer>
                 <p className="UIUX-desc">
                   We take care of the creation, construction and development of the brand, we know that each one is different, so it is
                   important to know that essence that makes them different from the others. Finding the DNA of your brand is our purpose.
                 </p>
-              </div>
+              </DescContainer>
 
-              <button className="see-more-button branding-btn">see more</button>
+              <Link to="/ui-ux" className="see-more-button branding-btn">
+                see more
+              </Link>
             </div>
           </GridContainer>
           <div className="UIUX-image-container">
