@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // Third party library imports
 import { connect } from 'react-redux';
@@ -9,13 +9,28 @@ import Menu from './Menu';
 
 import '../assets/styles/header.scss';
 import { elevateLogo } from '../assets';
-import { openMenuModel, toggleMenu } from '../actions/appActions';
+import { openMenuModel, toggleMenu, handleEndScroll, handleIsScrolling } from '../actions/appActions';
 
-const Header = props => {
-  const { isScrolling, openMenu, toggleMenu } = props;
+function Header(props) {
+  const { isScrolling, openMenu, toggleMenu, handleEndScroll, handleIsScrolling } = props;
   const handleToggleMenu = () => {
     toggleMenu(!openMenu);
   };
+
+  const handleScroll = () => {
+    if (window.pageYOffset === 0) {
+      handleEndScroll();
+    } else {
+      handleIsScrolling();
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const headerClass = isScrolling ? 'header-dark-background' : '';
   return (
@@ -39,7 +54,7 @@ const Header = props => {
       <Menu />
     </div>
   );
-};
+}
 
 const mapStateToProps = state => ({
   isScrolling: state.appReducer.isScrolling,
@@ -48,7 +63,9 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => {
   return {
     openMenuModel: () => dispatch(openMenuModel()),
-    toggleMenu: value => dispatch(toggleMenu(value))
+    toggleMenu: value => dispatch(toggleMenu(value)),
+    handleEndScroll: () => dispatch(handleEndScroll()),
+    handleIsScrolling: () => dispatch(handleIsScrolling())
   };
 };
 

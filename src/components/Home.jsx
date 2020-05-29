@@ -23,15 +23,6 @@ class Home extends React.Component {
     // this.currentSlide = null;
   }
 
-  componentDidMount = () => {
-    window.addEventListener('scroll', this.handleScroll);
-    // setTimeout(() => this.showSlides(slideIndex), 0.1);
-  };
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  }
-
   handleAutoPlay = duration => {
     this.timeoutFunction = setTimeout(() => this.gotoNext(), duration);
   };
@@ -93,14 +84,6 @@ class Home extends React.Component {
   handleSlideChange = index => {
     // clearTimeout(this.timeoutFunction);
     this.setState({ slideIndex: index }, () => this.getSlide(index));
-  };
-  handleScroll = () => {
-    const { handleEndScroll, handleIsScrolling } = this.props;
-    if (window.pageYOffset === 0) {
-      handleEndScroll();
-    } else {
-      handleIsScrolling();
-    }
   };
 
   getSlide = index => {
