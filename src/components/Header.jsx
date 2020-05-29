@@ -1,10 +1,14 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import '../assets/styles/header.scss';
-import { elevateLogo } from '../assets';
 
+// Third party library imports
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+
+// Components imports
 import Menu from './Menu';
 
+import '../assets/styles/header.scss';
+import { elevateLogo } from '../assets';
 import { openMenuModel, toggleMenu } from '../actions/appActions';
 
 const Header = props => {
@@ -18,15 +22,17 @@ const Header = props => {
     <div>
       <header className={`${headerClass} sticky`}>
         <div className="Header-logo-container">
-          <img src={elevateLogo} />
+          <Link to="/">
+            <img src={elevateLogo} />
+          </Link>
         </div>
 
         {/* menu icon */}
         <div className="Header-menu-button-container">
           <div className="icon-bars" onClick={() => handleToggleMenu()}>
-            <span className={`icon-bar ${openMenu ? "icon-bar-top-toggle" : "icon-bar-top "}`}></span>
-            <span className={`icon-bar ${openMenu ? "icon-bar-middle-toggle" : "icon-bar-middle"}`}></span>
-            <span className={`icon-bar ${openMenu ? "icon-bar-bottom-toggle" : "icon-bar-bottom"}`}></span>
+            <span className={`icon-bar ${openMenu ? 'icon-bar-top-toggle' : 'icon-bar-top '}`}></span>
+            <span className={`icon-bar ${openMenu ? 'icon-bar-middle-toggle' : 'icon-bar-middle'}`}></span>
+            <span className={`icon-bar ${openMenu ? 'icon-bar-bottom-toggle' : 'icon-bar-bottom'}`}></span>
           </div>
         </div>
       </header>
