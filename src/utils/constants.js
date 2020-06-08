@@ -2,10 +2,10 @@ import { placeHolderOne } from '../assets';
 
 export const navigationLinks = [
   { path: '/', name: 'Home' },
+  { path: '/about-us', name: 'About Us' },
   { path: '/creative-content', name: 'Creative Content' },
   { path: '/social-media-management', name: 'Social Media Management' },
-  { path: '/ui-ux', name: 'UI UX' },
-  { path: '/about-us', name: 'About Us' }
+  { path: '/ui-ux', name: 'UI UX' }
 ];
 
 export const brandingTags = ['Brand management', 'Strategic design', 'Packaging', '360 campaigns'];
