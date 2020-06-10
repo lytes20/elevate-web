@@ -6,7 +6,7 @@ import HeaderDetails from './HeaderDetails';
 import ProjectItem from './ProjectItem';
 
 import { uiUxProjects } from '../../utils/constants';
-import { smmBg, smmLabel } from '../../assets';
+import { smmBg, smmLabel, heartMainImage } from '../../assets';
 import '../../assets/styles/details/common.scss';
 import '../../assets/styles/details/uiuxdetails.scss';
 import { HeaderImage, HeaderImageContainer } from '../shared';
@@ -18,9 +18,12 @@ const SocialMediaManagementDetails = () => {
       <Header />
       <div>
         <HeaderDetails bgImage={smmBg}>
-          <HeaderImage width={25}>
+          <HeaderImage width={40}>
             <HeaderImageContainer>
               <img src={smmLabel} alt="text branding" />
+            </HeaderImageContainer>
+            <HeaderImageContainer>
+              <img src={heartMainImage} alt="text branding" />
             </HeaderImageContainer>
           </HeaderImage>
         </HeaderDetails>
