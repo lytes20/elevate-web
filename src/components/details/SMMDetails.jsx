@@ -4,6 +4,8 @@ import Header from '../Header';
 import FooterDetail from './FooterDetail';
 import HeaderDetails from './HeaderDetails';
 import ProjectItem from './ProjectItem';
+import NextPageLink from './NextPageLink';
+
 
 import { uiUxProjects } from '../../utils/constants';
 import { smmBg, smmLabel, heartMainImage } from '../../assets';
@@ -37,6 +39,7 @@ const SocialMediaManagementDetails = () => {
           <ProjectItem key={index} project={project} index={index} titleColor={socialMediaManagementColor} />
         ))}
       </div>
+      <NextPageLink path="/ui-ux" nextPageName="UI UX" color="#11c0ce" page="smm" />
       <FooterDetail bgColor={socialMediaManagementColor} />
     </div>
   );

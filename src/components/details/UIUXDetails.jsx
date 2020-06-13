@@ -4,6 +4,7 @@ import Header from '../Header';
 import FooterDetail from './FooterDetail';
 import HeaderDetails from './HeaderDetails';
 import ProjectItem from './ProjectItem';
+import NextPageLink from './NextPageLink';
 
 import { uiUxProjects } from '../../utils/constants';
 import { uiUxLabel, uiUxMain, uiUxDetailsBg } from '../../assets';
@@ -36,6 +37,7 @@ const UIUXDetails = () => {
           <ProjectItem key={index} project={project} index={index} titleColor="#B5BC21" />
         ))}
       </div>
+      <NextPageLink path="/creative-content" nextPageName="Creative Content" color="#B5BC21" page="uiux" />
       <FooterDetail bgColor="#B5BC21" />
     </div>
   );

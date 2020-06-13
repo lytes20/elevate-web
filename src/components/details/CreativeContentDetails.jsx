@@ -4,9 +4,10 @@ import Header from '../Header';
 import FooterDetail from './FooterDetail';
 import HeaderDetails from './HeaderDetails';
 import ProjectItem from './ProjectItem';
+import NextPageLink from './NextPageLink';
 
 import { uiUxProjects } from '../../utils/constants';
-import { creativeContentBg, creativeContentLabel, bulbImage } from '../../assets';
+import { creativeContentBg, creativeContentLabel, bulbImage, logoLimeGreen } from '../../assets';
 import '../../assets/styles/details/common.scss';
 import '../../assets/styles/details/uiuxdetails.scss';
 import { HeaderImage, HeaderImageContainer } from '../shared';
@@ -37,6 +38,7 @@ const CreativeContentDetails = () => {
           <ProjectItem key={index} project={project} index={index} titleColor={creativeContentColor} />
         ))}
       </div>
+      <NextPageLink path="/social-media-management" nextPageName="Social Media Management" color="#F7243E" page="creativecontent" />
       <FooterDetail bgColor={creativeContentColor} />
     </div>
   );

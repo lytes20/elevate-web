@@ -1,0 +1,12 @@
+.NextPageLink {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 80px;
+  .NextPageLink-items {
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+  }
+}
