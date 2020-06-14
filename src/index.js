@@ -4,6 +4,8 @@ import { Provider } from 'react-redux';
 
 import configureStore from './config/configStore';
 
+import 'react-toastify/dist/ReactToastify.css';
+
 import './index.css';
 import Routes from './routes';
 
