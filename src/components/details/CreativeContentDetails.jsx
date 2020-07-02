@@ -6,7 +6,7 @@ import HeaderDetails from './HeaderDetails';
 import ProjectItem from './ProjectItem';
 import NextPageLink from './NextPageLink';
 
-import { uiUxProjects } from '../../utils/constants';
+import { creativeContentProjects } from '../../utils/constants';
 import { creativeContentBg, creativeContentLabel, bulbImage, logoLimeGreen } from '../../assets';
 import '../../assets/styles/details/common.scss';
 import '../../assets/styles/details/uiuxdetails.scss';
@@ -34,7 +34,7 @@ const CreativeContentDetails = () => {
             Projects
           </h1>
         </div>
-        {uiUxProjects.map((project, index) => (
+        {creativeContentProjects.map((project, index) => (
           <ProjectItem key={index} project={project} index={index} titleColor={creativeContentColor} />
         ))}
       </div>

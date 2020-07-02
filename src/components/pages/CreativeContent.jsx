@@ -36,9 +36,8 @@ export default class BTLPage extends React.Component {
               <h2 className="btl-h2">Creative Content</h2>
               <DescContainer>
                 <p className="btl-p">
-                  We specialize in creating unique concepts for our clients, thanks to our handling in large events, we have the confidence
-                  and security of offering them the best service. We have, in our staff, account executives, art directors, creative
-                  directors and long-running executive producers.
+                  Mining deep into our minds to create value for our clients through “out of the box” ideas is our greatest joy. We aim at
+                  effectively communicating your ideas through Creative Design & Storytelling.
                 </p>
               </DescContainer>
 

@@ -12,6 +12,7 @@ import '../../assets/styles/pages/aboutus.scss';
 import { aboutUsBg } from '../../assets';
 import { whoWeAreBlurb, team, approachSteps } from '../../utils/constants';
 import { HeaderImage, HeaderImageContainer } from '../shared';
+import Approach from './Approach';
 
 const SectionContainer = styled.div`
   padding-top: 80px;
@@ -51,11 +52,6 @@ const Desc = styled.div`
   }
 `;
 
-const Para = styled.p`
-  font-size: 12px;
-  line-height: 1.5;
-`;
-
 const Step = styled.h1`
   text-transform: capitalize;
   ${props => `
@@ -78,7 +74,7 @@ function AboutUs() {
         </HeaderImage>
       </HeaderDetails>
       <ProjectItem project={whoWeAreBlurb} index={0} titleColor="gray" />
-      <div className="team-container">
+      {/* <div className="team-container">
         <div className="team-container-heading">
           <h1>Our Team</h1>
         </div>
@@ -87,7 +83,7 @@ function AboutUs() {
             <TeamItem key={index} member={member} />
           ))}
         </div>
-      </div>
+      </div> */}
       <SectionContainer>
         <SectionContainerHeading color="#164f95">
           <h1>Our Approach</h1>
@@ -95,11 +91,7 @@ function AboutUs() {
         <SectionDetailsContainer>
           <Desc>
             <div>
-              <Para>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-                dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-                book.
-              </Para>
+              <Approach />
             </div>
           </Desc>
           <div>

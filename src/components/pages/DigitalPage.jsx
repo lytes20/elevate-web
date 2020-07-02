@@ -17,8 +17,8 @@ export default function DigitalPage() {
             <h2 className="digital-h2">Social Media Management</h2>
             <DescContainer>
               <p className="digital-p">
-                We carry out social media, SEO (web positioning), SEM, corporate website design, online stores and we enhance your social
-                networks with the latest graphic design techniques and tools, to respond to the user experience.
+                Interested in building a clientele in the digital space! Entrust us to grow your digital family on all platforms possible,
+                keenly following it up to ensure continuous growth and success.
               </p>
             </DescContainer>
 

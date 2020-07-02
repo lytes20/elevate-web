@@ -7,7 +7,7 @@ import ProjectItem from './ProjectItem';
 import NextPageLink from './NextPageLink';
 
 
-import { uiUxProjects } from '../../utils/constants';
+import { smmProjects } from '../../utils/constants';
 import { smmBg, smmLabel, heartMainImage } from '../../assets';
 import '../../assets/styles/details/common.scss';
 import '../../assets/styles/details/uiuxdetails.scss';
@@ -35,7 +35,7 @@ const SocialMediaManagementDetails = () => {
             Projects
           </h1>
         </div>
-        {uiUxProjects.map((project, index) => (
+        {smmProjects.map((project, index) => (
           <ProjectItem key={index} project={project} index={index} titleColor={socialMediaManagementColor} />
         ))}
       </div>

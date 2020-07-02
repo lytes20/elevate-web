@@ -43,8 +43,9 @@ export default function BrandingPage() {
               <h2 className="branding-h2">UI UX Design</h2>
               <DescContainer>
                 <p className="UIUX-desc">
-                  We take care of the creation, construction and development of the brand, we know that each one is different, so it is
-                  important to know that essence that makes them different from the others. Finding the DNA of your brand is our purpose.
+                  We take care of the creation, construction, and development of the brand, we know that each one is different and has a
+                  unique experience, so it is important to know that essence that makes them different from the others. Finding the DNA of
+                  your digital brand is our purpose.
                 </p>
               </DescContainer>
 
